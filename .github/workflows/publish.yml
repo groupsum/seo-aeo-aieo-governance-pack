@@ -63,7 +63,7 @@ jobs:
 
       - name: Prepare release metadata
         id: release_meta
-        uses: cobycloud/actions/actions/release-prepare@main
+        uses: cobycloud/actions/actions/release-prepare@master
         with:
           version: ${{ steps.version.outputs.version }}
           changelog-path: CHANGELOG.md
@@ -101,7 +101,7 @@ jobs:
       - name: Sync packaged docs
         run: python scripts/sync_packaged_docs.py
 
-      - uses: cobycloud/actions/actions/python-package-build@main
+      - uses: cobycloud/actions/actions/python-package-build@master
         with:
           python-version: "3.12"
           project-path: "."
@@ -147,7 +147,7 @@ jobs:
           name: release-notes
           path: .
 
-      - uses: cobycloud/actions/actions/github-release@main
+      - uses: cobycloud/actions/actions/github-release@master
         with:
           tag-name: ${{ needs.prepare-release.outputs.tag-name }}
           name: ${{ needs.prepare-release.outputs.release-name }}
@@ -161,7 +161,7 @@ jobs:
       - build-dist
       - push-tag
     if: ${{ inputs.publish_to_pypi }}
-    uses: cobycloud/actions/.github/workflows/reusable-pypi-publish.yml@main
+    uses: cobycloud/actions/.github/workflows/reusable-pypi-publish.yml@master
     with:
       artifact-name: python-dist
       packages-dir: dist
