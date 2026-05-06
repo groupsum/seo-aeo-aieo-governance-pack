@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "seo-aeo-aieo-governance-pack"
-version = "0.1.0"
+version = "0.1.1"
 description = "Installable ADR and SPEC extension pack for SEO, AEO, and AiEO governance."
 readme = "README.md"
 requires-python = ">=3.10,<3.14"
