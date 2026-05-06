@@ -63,15 +63,41 @@ jobs:
 
       - name: Prepare release metadata
         id: release_meta
-        uses: cobycloud/actions/actions/release-prepare@master
-        with:
-          version: ${{ steps.version.outputs.version }}
-          changelog-path: CHANGELOG.md
-          release-notes-output: release-notes.md
-          fallback-notes: SEO/AEO/AiEO governance pack release ${{ steps.version.outputs.version }}
-          validate-version-files: |
-            pyproject.toml
-            src/seo_aeo_aieo_governance_pack/__init__.py
+        shell: bash
+        run: |
+          version="${{ steps.version.outputs.version }}"
+          tag="v${version}"
+          {
+            echo "version=$version"
+            echo "tag-name=$tag"
+            echo "release-name=$tag"
+            echo "release-notes=release-notes.md"
+          } >> "$GITHUB_OUTPUT"
+          python - <<'PY'
+          from pathlib import Path
+
+          version = Path("pyproject.toml").read_text(encoding="utf-8")
+          module = Path("src/seo_aeo_aieo_governance_pack/__init__.py").read_text(encoding="utf-8")
+          target = "${{ steps.version.outputs.version }}"
+          if target not in version:
+              raise SystemExit("version not found in pyproject.toml")
+          if target not in module:
+              raise SystemExit("version not found in package __init__.py")
+          changelog = Path("CHANGELOG.md").read_text(encoding="utf-8")
+          start = changelog.find(f"## {target}")
+          if start == -1:
+              notes = f"SEO/AEO/AiEO governance pack release {target}\n"
+          else:
+              rest = changelog[start:].splitlines()
+              collected = []
+              for line in rest[1:]:
+                  if line.startswith("## "):
+                      break
+                  collected.append(line)
+              body = "\n".join(collected).strip()
+              notes = body + "\n" if body else f"SEO/AEO/AiEO governance pack release {target}\n"
+          Path("release-notes.md").write_text(notes, encoding="utf-8")
+          PY
 
       - name: Upload release notes
         uses: actions/upload-artifact@v4
@@ -101,12 +127,21 @@ jobs:
       - name: Sync packaged docs
         run: python scripts/sync_packaged_docs.py
 
-      - uses: cobycloud/actions/actions/python-package-build@master
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          project-path: "."
-          out-dir: dist
-          artifact-name: python-dist
+
+      - name: Build package
+        run: uv build --project "." --out-dir dist
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: python-dist
+          path: dist
 
   push-tag:
     runs-on: ubuntu-latest
@@ -147,13 +182,12 @@ jobs:
           name: release-notes
           path: .
 
-      - uses: cobycloud/actions/actions/github-release@master
+      - uses: softprops/action-gh-release@v2
         with:
-          tag-name: ${{ needs.prepare-release.outputs.tag-name }}
+          tag_name: ${{ needs.prepare-release.outputs.tag-name }}
           name: ${{ needs.prepare-release.outputs.release-name }}
           body-path: ${{ needs.prepare-release.outputs.release-notes }}
           files: dist/*
-          token: ${{ github.token }}
 
   pypi-publish:
     runs-on: ubuntu-latest
@@ -172,6 +206,6 @@ jobs:
           name: python-dist
           path: dist
 
-      - uses: cobycloud/actions/actions/pypi-publish@master
+      - uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: dist
