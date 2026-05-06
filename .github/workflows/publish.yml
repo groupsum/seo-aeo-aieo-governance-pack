@@ -37,12 +37,12 @@ jobs:
       release-notes: ${{ steps.release_meta.outputs.release-notes }}
       release-ref: ${{ steps.commit.outputs.release-ref }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -120,7 +120,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: prepare-release
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ needs.prepare-release.outputs.release-ref }}
 
@@ -131,7 +131,7 @@ jobs:
         with:
           enable-cache: true
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -149,7 +149,7 @@ jobs:
       - prepare-release
       - build-dist
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ needs.prepare-release.outputs.release-ref }}
           fetch-depth: 0
@@ -168,7 +168,7 @@ jobs:
       - push-tag
     if: ${{ inputs.publish_to_github_release }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ needs.prepare-release.outputs.release-ref }}
 
@@ -186,7 +186,7 @@ jobs:
         with:
           tag_name: ${{ needs.prepare-release.outputs.tag-name }}
           name: ${{ needs.prepare-release.outputs.release-name }}
-          body-path: ${{ needs.prepare-release.outputs.release-notes }}
+          body_path: ${{ needs.prepare-release.outputs.release-notes }}
           files: dist/*
 
   pypi-publish:
@@ -197,7 +197,7 @@ jobs:
       - push-tag
     if: ${{ inputs.publish_to_pypi }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ needs.prepare-release.outputs.release-ref }}
 
@@ -209,3 +209,4 @@ jobs:
       - uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: dist
+          password: ${{ secrets.PYPI_API_TOKEN }}
