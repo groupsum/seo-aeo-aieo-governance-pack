@@ -51,9 +51,9 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/cobycloud/seo-aeo-aieo-governance-pack"
-Repository = "https://github.com/cobycloud/seo-aeo-aieo-governance-pack"
-Issues = "https://github.com/cobycloud/seo-aeo-aieo-governance-pack/issues"
+Homepage = "https://github.com/groupsum/seo-aeo-aieo-governance-pack"
+Repository = "https://github.com/groupsum/seo-aeo-aieo-governance-pack"
+Issues = "https://github.com/groupsum/seo-aeo-aieo-governance-pack/issues"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

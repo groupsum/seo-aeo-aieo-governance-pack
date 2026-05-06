@@ -1,0 +1,168 @@
+name: publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      semver:
+        description: Semver bump type
+        required: true
+        default: patch
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+      publish_to_github_release:
+        description: Create a GitHub release for the bumped tag
+        required: true
+        default: true
+        type: boolean
+      publish_to_pypi:
+        description: Publish the built distributions to PyPI
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  prepare-release:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      tag-name: ${{ steps.release_meta.outputs.tag-name }}
+      release-name: ${{ steps.release_meta.outputs.release-name }}
+      release-notes: ${{ steps.release_meta.outputs.release-notes }}
+      release-ref: ${{ steps.commit.outputs.release-ref }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Bump package version
+        id: version
+        shell: bash
+        run: |
+          version="$(python scripts/bump_version.py --bump "${{ inputs.semver }}" --write)"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Sync packaged docs
+        run: python scripts/sync_packaged_docs.py
+
+      - name: Run unit tests
+        shell: bash
+        run: |
+          PYTHONPATH=src python -m unittest discover -s tests -v
+
+      - name: Prepare release metadata
+        id: release_meta
+        uses: cobycloud/actions/actions/release-prepare@main
+        with:
+          version: ${{ steps.version.outputs.version }}
+          changelog-path: CHANGELOG.md
+          release-notes-output: release-notes.md
+          fallback-notes: SEO/AEO/AiEO governance pack release ${{ steps.version.outputs.version }}
+          validate-version-files: |
+            pyproject.toml
+            src/seo_aeo_aieo_governance_pack/__init__.py
+
+      - name: Upload release notes
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-notes
+          path: ${{ steps.release_meta.outputs.release-notes }}
+
+      - name: Commit version bump
+        id: commit
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pyproject.toml CHANGELOG.md src/seo_aeo_aieo_governance_pack/__init__.py
+          git commit -m "chore(release): bump version to ${{ steps.version.outputs.version }}"
+          git push origin "HEAD:${{ github.ref_name }}"
+          echo "release-ref=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  build-dist:
+    runs-on: ubuntu-latest
+    needs: prepare-release
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.prepare-release.outputs.release-ref }}
+
+      - name: Sync packaged docs
+        run: python scripts/sync_packaged_docs.py
+
+      - uses: cobycloud/actions/actions/python-package-build@main
+        with:
+          python-version: "3.12"
+          project-path: "."
+          out-dir: dist
+          artifact-name: python-dist
+
+  push-tag:
+    runs-on: ubuntu-latest
+    needs:
+      - prepare-release
+      - build-dist
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.prepare-release.outputs.release-ref }}
+          fetch-depth: 0
+
+      - name: Create and push release tag
+        shell: bash
+        run: |
+          git tag "${{ needs.prepare-release.outputs.tag-name }}"
+          git push origin "${{ needs.prepare-release.outputs.tag-name }}"
+
+  github-release:
+    runs-on: ubuntu-latest
+    needs:
+      - prepare-release
+      - build-dist
+      - push-tag
+    if: ${{ inputs.publish_to_github_release }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.prepare-release.outputs.release-ref }}
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: python-dist
+          path: dist
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-notes
+          path: .
+
+      - uses: cobycloud/actions/actions/github-release@main
+        with:
+          tag-name: ${{ needs.prepare-release.outputs.tag-name }}
+          name: ${{ needs.prepare-release.outputs.release-name }}
+          body-path: ${{ needs.prepare-release.outputs.release-notes }}
+          files: dist/*
+          token: ${{ github.token }}
+
+  pypi-publish:
+    needs:
+      - prepare-release
+      - build-dist
+      - push-tag
+    if: ${{ inputs.publish_to_pypi }}
+    uses: cobycloud/actions/.github/workflows/reusable-pypi-publish.yml@main
+    with:
+      artifact-name: python-dist
+      packages-dir: dist
+    secrets: inherit
