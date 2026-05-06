@@ -8,9 +8,13 @@ on:
 
 jobs:
   python-uv-ci:
-    uses: cobycloud/actions/.github/workflows/reusable-python-uv-ci.yml@master
-    with:
-      python-version: "3.12"
-      working-directory: "."
-      install-command: uv sync --all-groups
-      run-command: uv run python -m unittest discover -s tests -v
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: cobycloud/actions/actions/python-uv@master
+        with:
+          python-version: "3.12"
+          working-directory: "."
+          install-command: uv sync --all-groups
+          run-command: uv run python -m unittest discover -s tests -v
