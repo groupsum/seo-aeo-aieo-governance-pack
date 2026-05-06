@@ -1,0 +1,17 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  python-uv-ci:
+    uses: cobycloud/actions/.github/workflows/reusable-python-uv-ci.yml@main
+    with:
+      python-version: "3.12"
+      working-directory: "."
+      install-command: uv sync --all-groups
+      run-command: uv run python -m unittest discover -s tests -v
+

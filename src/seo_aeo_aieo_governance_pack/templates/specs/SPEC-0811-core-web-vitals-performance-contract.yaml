@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "spec",
+  "id": "spc:0811",
+  "number": 811,
+  "slug": "core-web-vitals-performance-contract",
+  "title": "Core Web Vitals performance contract",
+  "status": "draft",
+  "origin": "extension-pack",
+  "summary": "Defines the governed user-experience performance targets that materially affect page usability and search-adjacent quality evaluation.",
+  "body": "The Core Web Vitals performance contract SHALL define the governed user-experience performance targets that materially affect page usability and search-adjacent quality evaluation.\n\nThis contract SHALL cover:\n- Largest Contentful Paint (LCP)\n- Interaction to Next Paint (INP)\n- Cumulative Layout Shift (CLS)\n\nTarget thresholds for governed pages SHOULD align with current Google guidance at the 75th percentile, including:\n- LCP <= 2.5 seconds\n- INP <= 200 milliseconds\n- CLS <= 0.1\n\nDownstream implementations SHOULD evaluate these metrics using field-oriented measurement where practical and SHOULD distinguish:\n- template-level regressions\n- route-level regressions\n- asset-induced regressions\n- third-party script regressions\n\nThis contract SHALL treat performance as a governed user-experience surface, not as a guarantee of ranking outcome.",
+  "spec_kind": "normative",
+  "adr_ids": [
+    "adr:0803",
+    "adr:0805"
+  ],
+  "decision_date": null,
+  "references": [],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "performance",
+    "core-web-vitals",
+    "lcp",
+    "inp",
+    "cls"
+  ]
+}

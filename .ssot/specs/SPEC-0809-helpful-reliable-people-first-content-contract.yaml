@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "spec",
+  "id": "spc:0809",
+  "number": 809,
+  "slug": "helpful-reliable-people-first-content-contract",
+  "title": "Helpful, reliable, people-first content contract",
+  "status": "draft",
+  "origin": "extension-pack",
+  "summary": "Defines the baseline editorial and authorship expectations for governed content.",
+  "body": "The helpful, reliable, people-first content contract SHALL define the baseline editorial and authorship expectations for governed content.\n\nGoverned content SHALL:\n- demonstrate a clear purpose for the intended audience\n- avoid misleading, auto-generated, or low-originality material presented as authoritative without support\n- make the source, responsible party, or publishing context reasonably clear when that context materially affects trust\n- preserve factual claims in forms that can be inspected and attributed\n- avoid designing pages primarily to manipulate ranking signals rather than to help users complete an information task\n\nContent intended for search, answer, and AI-consumption surfaces SHOULD also make \"who\", \"how\", and \"why\" legible where applicable:\n- who created or is responsible for the content\n- how the content was produced, evaluated, or compiled\n- why the content exists and what user need it serves\n\nThis contract governs content quality expectations. It does not replace technical crawl, metadata, or structured-data contracts.",
+  "spec_kind": "normative",
+  "adr_ids": [
+    "adr:0803",
+    "adr:0805"
+  ],
+  "decision_date": null,
+  "references": [],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "content-quality",
+    "people-first",
+    "authorship",
+    "trust"
+  ]
+}

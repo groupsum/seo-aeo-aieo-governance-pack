@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "adr",
+  "id": "adr:0801",
+  "number": 801,
+  "slug": "crawl-control-is-distinct-from-indexing-control",
+  "title": "Crawl control is distinct from indexing control",
+  "status": "draft",
+  "origin": "extension-pack",
+  "summary": "Crawl control and indexing control are separate mechanisms and shall not be conflated.",
+  "body": "Crawl control and indexing control SHALL be treated as separate mechanisms.\n\n`robots.txt` governs crawler access behavior. It does not itself guarantee deindexing or snippet suppression.\n\nIndexing and preview controls SHALL be modeled separately through page-level or response-level controls such as:\n- `noindex`\n- `nosnippet`\n- `max-snippet`\n- `data-nosnippet`\n- `X-Robots-Tag`\n\nGuidance in this pack SHALL avoid treating crawl denial as equivalent to removal from search results, answer surfaces, or AI-generated previews.\n\nDownstream implementations SHALL distinguish:\n- discovery permission\n- fetch permission\n- indexing eligibility\n- snippet or preview eligibility\n- model-specific or search-specific reuse controls",
+  "decision_date": null,
+  "references": [],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "robots",
+    "indexing",
+    "snippets",
+    "crawl-control",
+    "preview-controls"
+  ]
+}

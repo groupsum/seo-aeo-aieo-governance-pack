@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seo-aeo-aieo-governance-pack"
+version = "0.1.0"
+description = "Installable ADR and SPEC extension pack for SEO, AEO, and AiEO governance."
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+license = "Apache-2.0"
+authors = [{ name = "Jacob Stewart", email = "jacob@swarmauri.com" }]
+dependencies = ["tomli>=2.0.1; python_version < '3.11'"]
+keywords = [
+  "ssot",
+  "ssot-registry",
+  "extension-pack",
+  "seo",
+  "aeo",
+  "aieo",
+  "search-engine-optimization",
+  "answer-engine-optimization",
+  "ai-engine-optimization",
+  "manifest",
+  "governance",
+  "adr",
+  "spec",
+  "uv",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Internet",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+  "Topic :: Software Development :: Documentation",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Text Processing :: Markup",
+  "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/cobycloud/seo-aeo-aieo-governance-pack"
+Repository = "https://github.com/cobycloud/seo-aeo-aieo-governance-pack"
+Issues = "https://github.com/cobycloud/seo-aeo-aieo-governance-pack/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"seo_aeo_aieo_governance_pack.templates.adr" = ["*.json", "*.yaml"]
+"seo_aeo_aieo_governance_pack.templates.specs" = ["*.json", "*.yaml"]
+
+[dependency-groups]
+dev = []

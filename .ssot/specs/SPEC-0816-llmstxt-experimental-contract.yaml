@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "spec",
+  "id": "spc:0816",
+  "number": 816,
+  "slug": "llmstxt-experimental-contract",
+  "title": "`llms.txt` experimental contract",
+  "status": "draft",
+  "origin": "extension-pack",
+  "summary": "Defines the optional use of `llms.txt` as a curated machine-readable guide for AI-oriented consumption.",
+  "body": "The `llms.txt` experimental contract SHALL define the optional use of `llms.txt` as a curated machine-readable guide for AI-oriented consumption.\n\nThis contract SHALL treat `llms.txt` as experimental and non-authoritative.\n\nIf a governed site publishes `llms.txt`, it SHOULD:\n- point to canonical resources rather than substitute for them\n- summarize high-value documentation or knowledge entry points\n- avoid introducing policy, facts, or routing information that conflicts with canonical HTML, structured data, robots controls, or sitemap artifacts\n- remain human-inspectable and operationally maintainable\n\n`llms.txt` SHALL NOT be treated in this pack as:\n- a replacement for `robots.txt`\n- a replacement for `sitemap.xml`\n- a replacement for canonical page metadata\n- a guaranteed activation mechanism for AI search or AI answer systems\n\nDownstream implementations MAY adopt `llms.txt` where useful, but SHALL model it as an auxiliary artifact with explicitly lower authority than normative web and platform contracts.",
+  "spec_kind": "normative",
+  "adr_ids": [
+    "adr:0802",
+    "adr:0809"
+  ],
+  "decision_date": null,
+  "references": [],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "llms.txt",
+    "experimental",
+    "ai",
+    "auxiliary-artifacts"
+  ]
+}

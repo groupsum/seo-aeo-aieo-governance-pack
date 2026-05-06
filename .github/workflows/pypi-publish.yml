@@ -1,0 +1,31 @@
+name: pypi-publish
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync packaged docs
+        run: python scripts/sync_packaged_docs.py
+
+      - uses: cobycloud/actions/actions/python-package-build@main
+        with:
+          python-version: "3.12"
+          project-path: "."
+          out-dir: dist
+          artifact-name: python-dist
+
+      - uses: cobycloud/actions/actions/pypi-publish@main
+        with:
+          packages-dir: dist
+

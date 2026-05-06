@@ -1,0 +1,39 @@
+name: github-release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag-name:
+        description: Release tag to create
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync packaged docs
+        run: python scripts/sync_packaged_docs.py
+
+      - uses: cobycloud/actions/actions/python-package-build@main
+        with:
+          python-version: "3.12"
+          project-path: "."
+          out-dir: dist
+          artifact-name: python-dist
+
+      - uses: cobycloud/actions/actions/github-release@main
+        with:
+          tag-name: ${{ github.event_name == 'workflow_dispatch' && inputs.tag-name || github.ref_name }}
+          name: ${{ github.event_name == 'workflow_dispatch' && inputs.tag-name || github.ref_name }}
+          body: Installable ADR and SPEC extension pack for SEO, AEO, and AiEO governance.
+          files: dist/*
+          token: ${{ github.token }}

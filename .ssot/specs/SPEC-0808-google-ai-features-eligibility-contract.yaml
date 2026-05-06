@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "spec",
+  "id": "spc:0808",
+  "number": 808,
+  "slug": "google-ai-features-eligibility-contract",
+  "title": "Google AI features eligibility contract",
+  "status": "draft",
+  "origin": "extension-pack",
+  "summary": "Defines the minimum requirements for content intended to remain eligible for Google AI-assisted search surfaces.",
+  "body": "The Google AI features eligibility contract SHALL define the minimum requirements for content intended to remain eligible for Google AI-assisted search surfaces.\n\nThis contract adopts Google's published position that AI feature eligibility is grounded in normal Search eligibility rather than a separate AI-only markup system.\n\nContent governed by this contract SHALL:\n- remain crawlable where discovery is desired\n- remain index-eligible where search appearance is desired\n- remain snippet-eligible where excerpting is desired\n- expose visible, useful, and directly attributable page content\n- maintain canonical consistency across duplicate URLs\n- avoid unsupported claims that special AI schema or AI-only files are required for Google AI surfaces\n\nStructured data MAY support clearer machine interpretation, but SHALL NOT be presented as a guaranteed or mandatory AI-feature activation mechanism unless Google's published guidance explicitly requires it.",
+  "spec_kind": "normative",
+  "adr_ids": [
+    "adr:0803",
+    "adr:0805"
+  ],
+  "decision_date": null,
+  "references": [],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "google",
+    "ai-features",
+    "eligibility",
+    "snippets"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "spec",
+  "id": "spc:0801",
+  "number": 801,
+  "slug": "aeo-answer-surface-contract",
+  "title": "AEO answer surface contract",
+  "status": "draft",
+  "origin": "extension-pack",
+  "summary": "The AEO answer surface defines requirements for content intended to be surfaced as direct or near-direct answers in answer systems.",
+  "body": "The AEO answer surface SHALL define requirements for content intended to be surfaced as direct or near-direct answers in search-adjacent answer systems.\n\nAnswer-oriented content SHALL:\n- align a question, prompt, or intent with a clear answer unit\n- preserve source attribution to a canonical resource\n- expose the answer in visible textual form\n- preserve freshness or update context when timeliness matters\n- avoid conflicting duplicate answer variants across canonical duplicates\n\nRecommended answer units include:\n- FAQ entries\n- definitions\n- product facts\n- concise process steps\n- summary paragraphs with explicit scope\n\nThe surface SHALL assume that answer extraction systems may select only part of a page. Therefore, the answer unit itself SHOULD be locally intelligible without relying on hidden context.",
+  "spec_kind": "normative",
+  "adr_ids": [
+    "adr:0800",
+    "adr:0803",
+    "adr:0805"
+  ],
+  "decision_date": null,
+  "references": [],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "aeo",
+    "answers",
+    "source-attribution",
+    "canonical"
+  ]
+}
