@@ -1,8 +1,22 @@
-# seo-aeo-aieo-governance-pack
+<div align="center">
+
+<h1>seo-aeo-aieo-governance-pack</h1>
+
+<p>
+  <a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack"><img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-groupsum%2Fseo--aeo--aieo--governance--pack-181717?logo=github"></a>
+  <a href="https://pypi.org/project/seo-aeo-aieo-governance-pack/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/seo-aeo-aieo-governance-pack.svg"></a>
+  <a href="https://pypi.org/project/seo-aeo-aieo-governance-pack/"><img alt="PyPI downloads" src="https://img.shields.io/pypi/dm/seo-aeo-aieo-governance-pack.svg"></a>
+  <a href="https://pypi.org/project/seo-aeo-aieo-governance-pack/"><img alt="Python versions" src="https://img.shields.io/pypi/pyversions/seo-aeo-aieo-governance-pack.svg"></a>
+  <a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/pypi/l/seo-aeo-aieo-governance-pack.svg"></a>
+  <a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://hits.sh/github.com/groupsum/seo-aeo-aieo-governance-pack/"><img alt="Hits" src="https://hits.sh/github.com/groupsum/seo-aeo-aieo-governance-pack.svg"></a>
+</p>
+
+</div>
 
 `seo-aeo-aieo-governance-pack` is a small SSOT-compatible document pack for SEO, AEO, and AiEO governance.
 
-It is designed to be published to PyPI and consumed by `ssot-registry` as an installable `extension-pack` document source. This repository does not perform downstream mutation itself. Its job is to ship immutable ADR and SPEC artifacts plus manifests that a downstream `ssot-registry` runtime can sync into the downstream `.ssot` registry.
+It is designed to be published to PyPI and consumed by [`ssot-registry`](https://pypi.org/project/ssot-registry/) as an installable `extension-pack` document source. This repository does not perform downstream mutation itself. Its job is to ship immutable ADR and SPEC artifacts plus manifests that a downstream [`ssot-registry`](https://pypi.org/project/ssot-registry/) runtime can sync into the downstream `.ssot` registry.
 
 The packaged distribution has one document artifact surface: `src/seo_aeo_aieo_governance_pack/templates/`. This repository does not package or maintain a parallel `.ssot/registry.json`.
 
@@ -82,7 +96,7 @@ print(text[:120])
 
 ## Release notes
 
-This repository includes reusable `cobycloud/actions` workflows for:
+This repository includes reusable [`cobycloud/actions`](https://github.com/cobycloud/actions) workflows for:
 
 - CI
 - GitHub release creation
