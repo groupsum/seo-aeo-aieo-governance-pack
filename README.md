@@ -17,7 +17,7 @@
 
 </div>
 
-`seo-aeo-aieo-governance-pack` is a small SSOT-compatible document pack for SEO, AEO, and AiEO governance.
+`seo-aeo-aieo-governance-pack` is a small SSOT-compatible document pack for SEO, AEO, AiEO, and accessibility governance.
 
 It is designed to be published to PyPI and consumed by [`ssot-registry`](https://pypi.org/project/ssot-registry/) as an installable `extension-pack` document source. This repository does not perform downstream mutation itself. Its job is to ship immutable ADR and SPEC artifacts plus manifests that a downstream [`ssot-registry`](https://pypi.org/project/ssot-registry/) runtime can sync into the downstream `.ssot` registry.
 
@@ -27,6 +27,7 @@ The packaged distribution has one document artifact surface: `src/seo_aeo_aieo_g
 
 - upstream ADRs for SEO, AEO, and AiEO governance
 - upstream SPECs for SEO, AEO, and AiEO operator requirements
+- upstream accessibility ADRs and SPECs, including WCAG 2.1 AA baseline coverage
 - packaged manifests for ADR and SPEC discovery
 - a minimal Python loader module for runtime consumption
 
@@ -77,9 +78,12 @@ print(text[:120])
 - `adr:0803` canonical HTML metadata remains the source page contract
 - `adr:0804` structured data uses layered authority
 - `adr:0805` Google AI features do not justify AI-specific schema or AI-only files
+- `adr:0806` accessibility conformance is a governed discovery-quality prerequisite
 - `adr:0807` social graph metadata is separate from search structured data
 - `adr:0808` AI crawler controls must distinguish search, training, and user-triggered fetch
 - `adr:0809` `llms.txt` is experimental and must not outrank canonical surfaces
+- `adr:0810` performance metrics use standards-backed authority where available
+- `adr:0811` derived tooling metrics remain separate from web-platform normative metrics
 - `spc:0800` SEO governance surface
 - `spc:0801` AEO answer surface contract
 - `spc:0802` AiEO citation and provenance contract
@@ -90,12 +94,17 @@ print(text[:120])
 - `spc:0807` Google Search eligibility and structured data quality contract
 - `spc:0808` Google AI features eligibility contract
 - `spc:0809` helpful, reliable, people-first content contract
+- `spc:0810` WCAG 2.1 AA accessibility contract
 - `spc:0811` Core Web Vitals performance contract
 - `spc:0812` Open Graph contract
 - `spc:0813` X / Twitter Cards contract
 - `spc:0814` DCMI interoperable metadata contract
 - `spc:0815` OpenAI crawler controls contract
 - `spc:0816` `llms.txt` experimental contract
+- `spc:0817` First Contentful Paint contract
+- `spc:0818` Largest Contentful Paint contract
+- `spc:0819` Long Tasks responsiveness contract
+- `spc:0820` Total Blocking Time operator contract
 
 ## Release notes
 

@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "spec",
+  "id": "spc:0818",
+  "number": 818,
+  "slug": "largest-contentful-paint-contract",
+  "title": "Largest Contentful Paint contract",
+  "status": "draft",
+  "origin": "extension-pack",
+  "summary": "Defines the governed measurement semantics and operator expectations for Largest Contentful Paint using the W3C Largest Contentful Paint authority layer.",
+  "body": "The Largest Contentful Paint contract SHALL define the governed measurement semantics and operator expectations for Largest Contentful Paint using the W3C Largest Contentful Paint authority layer.\n\nThis contract SHALL cover:\n- Largest Contentful Paint (LCP) as a standards-backed content-rendering metric\n- candidate update behavior while the page is loading and rendering\n- operator reporting that distinguishes measured rendering outcomes from search ranking guarantees\n\nGoverned implementations SHOULD use LCP as a primary rendering-quality signal for the main content experience of a page.\n\nWhere threshold policies are defined, they SHOULD align with current operator guidance for the applicable audience and device class, while preserving the W3C metric semantics.\n\nThis contract SHALL treat LCP as a governed user-experience metric that is relevant to search-adjacent quality evaluation, but SHALL NOT describe LCP as a guarantee of ranking outcome.",
+  "spec_kind": "normative",
+  "adr_ids": [
+    "adr:0810"
+  ],
+  "decision_date": null,
+  "references": [
+    {
+      "label": "Largest Contentful Paint",
+      "url": "https://www.w3.org/TR/largest-contentful-paint/",
+      "kind": "normative"
+    }
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "performance",
+    "lcp",
+    "rendering",
+    "core-web-vitals"
+  ]
+}

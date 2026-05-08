@@ -9,7 +9,7 @@ from seo_aeo_aieo_governance_pack import load_document_manifest, read_packaged_d
 class TemplateManifestTests(unittest.TestCase):
     def test_adr_manifest_has_expected_rows(self) -> None:
         manifest = load_document_manifest("adr")
-        self.assertEqual(10, len(manifest))
+        self.assertEqual(12, len(manifest))
         self.assertEqual(
             [
                 "adr:0800",
@@ -22,13 +22,15 @@ class TemplateManifestTests(unittest.TestCase):
                 "adr:0807",
                 "adr:0808",
                 "adr:0809",
+                "adr:0810",
+                "adr:0811",
             ],
             [row["id"] for row in manifest],
         )
 
     def test_spec_manifest_has_expected_rows(self) -> None:
         manifest = load_document_manifest("spec")
-        self.assertEqual(17, len(manifest))
+        self.assertEqual(21, len(manifest))
         self.assertEqual(
             [
                 "spc:0800",
@@ -48,6 +50,10 @@ class TemplateManifestTests(unittest.TestCase):
                 "spc:0814",
                 "spc:0815",
                 "spc:0816",
+                "spc:0817",
+                "spc:0818",
+                "spc:0819",
+                "spc:0820",
             ],
             [row["id"] for row in manifest],
         )

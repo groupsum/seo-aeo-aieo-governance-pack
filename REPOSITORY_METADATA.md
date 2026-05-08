@@ -6,7 +6,7 @@ Suggested GitHub repository name:
 
 Suggested description:
 
-- Installable ADR/SPEC extension pack for SEO, AEO, and AiEO governance, designed for downstream `ssot-registry` sync.
+- Installable ADR/SPEC extension pack for SEO, AEO, AiEO, and WCAG-aligned accessibility governance, designed for downstream `ssot-registry` sync.
 
 Suggested topics:
 
@@ -19,6 +19,9 @@ Suggested topics:
 - `search-engine-optimization`
 - `answer-engine-optimization`
 - `ai-engine-optimization`
+- `accessibility`
+- `wcag`
+- `wcag-2.1`
 - `python`
 - `uv`
 - `governance`

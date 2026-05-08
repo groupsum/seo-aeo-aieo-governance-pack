@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "adr",
+  "id": "adr:0811",
+  "number": 811,
+  "slug": "derived-tooling-metrics-remain-separate-from-web-platform-normative-metrics",
+  "title": "Derived tooling metrics remain separate from web-platform normative metrics",
+  "status": "draft",
+  "origin": "extension-pack",
+  "summary": "Derived tooling metrics such as TBT SHALL remain separate from web-platform normative metrics and SHALL be governed as operator guidance rather than platform semantics.",
+  "body": "Derived tooling metrics such as TBT SHALL remain separate from web-platform normative metrics and SHALL be governed as operator guidance rather than platform semantics.\n\nThis decision exists to prevent taxonomy drift between:\n- normative timing definitions published through web-platform standards\n- operator and lab tooling metrics that aggregate or transform lower-level platform signals\n\nWithin this pack, TBT SHALL be modeled as an operator metric derived from:\n- long tasks that exceed 50 milliseconds\n- a reporting window that begins after First Contentful Paint\n- a tooling-specific aggregation model\n\nThis pack SHALL NOT describe TBT as though it were a W3C recommendation-track performance metric. Where TBT is useful, it MAY be included as governed diagnostic guidance for responsiveness and main-thread blocking behavior.",
+  "decision_date": null,
+  "references": [
+    {
+      "label": "Long Tasks API",
+      "url": "https://www.w3.org/TR/longtasks-1/",
+      "kind": "normative"
+    },
+    {
+      "label": "Total Blocking Time",
+      "url": "https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time",
+      "kind": "informative"
+    }
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "performance",
+    "tbt",
+    "tooling",
+    "governance",
+    "authority"
+  ]
+}
