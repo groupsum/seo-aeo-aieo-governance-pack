@@ -7,7 +7,7 @@
   <a href="https://pepy.tech/projects/seo-aeo-aieo-governance-pack"><img alt="Downloads" src="https://static.pepy.tech/badge/seo-aeo-aieo-governance-pack"></a>
   <a href="https://hits.sh/github.com/groupsum/seo-aeo-aieo-governance-pack/"><img alt="Hits" src="https://hits.sh/github.com/groupsum/seo-aeo-aieo-governance-pack.svg"></a>
   <a href="https://pypi.org/project/seo-aeo-aieo-governance-pack/"><img alt="Python versions" src="https://img.shields.io/pypi/pyversions/seo-aeo-aieo-governance-pack.svg"></a>
-  <a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/pypi/l/seo-aeo-aieo-governance-pack.svg"></a>
+  <a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/pypi/l/seo-aeo-aieo-governance-pack.svg"></a>
   <a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/ci.yml/badge.svg?branch=master"></a>
 </p>
 
@@ -17,60 +17,45 @@
 
 </div>
 
-`seo-aeo-aieo-governance-pack` is a small SSOT-compatible document pack for SEO, AEO, AiEO, and accessibility governance.
+`seo-aeo-aieo-governance-pack` is an SSOT Registry pack for search visibility, answer visibility, AI citation readiness, web metadata quality, accessibility, and performance governance.
 
-It is designed to be published to PyPI and consumed by [`ssot-registry`](https://pypi.org/project/ssot-registry/) as an installable `extension-pack` document source. This repository does not perform downstream mutation itself. Its job is to ship immutable ADR and SPEC artifacts plus manifests that a downstream [`ssot-registry`](https://pypi.org/project/ssot-registry/) runtime can sync into the downstream `.ssot` registry.
+It gives product, platform, content, and compliance teams a shared set of Architecture Decision Records (ADRs) and Specifications (SPECs) that can be applied across many repositories. Centralizing these requirements turns discoverability work into reusable governance: one reviewed standard can be synchronized into project registries, linked to features and tests, and reused during release review instead of being rewritten from scratch in every product.
 
-The packaged distribution has one document artifact surface: `src/seo_aeo_aieo_governance_pack/templates/`. This repository does not package or maintain a parallel `.ssot/registry.json`.
+## What Is An SSOT Registry Pack?
 
-## What is in scope
+An SSOT Registry pack is an installable package of governed ADRs and SPECs for [`ssot-registry`](https://pypi.org/project/ssot-registry/). The pack supplies reusable decision and requirement documents. `ssot-registry` applies those documents to a project registry so teams can trace product requirements from decision, to specification, to implementation, to tests and release evidence.
 
-- upstream ADRs for SEO, AEO, and AiEO governance
-- upstream SPECs for SEO, AEO, and AiEO operator requirements
-- upstream accessibility ADRs and SPECs, including WCAG 2.1 AA baseline coverage
-- packaged manifests for ADR and SPEC discovery
-- a minimal Python loader module for runtime consumption
+This makes governance portable. A project can adopt the pack, synchronize the documents, list the active requirements, and connect local features or tests to the shared IDs.
 
-## What is intentionally out of scope
+## Why This Pack Exists
 
-- downstream feature, claim, test, evidence, boundary, or release mutation
-- repo-specific scoring logic
-- crawler, answer-engine, or model-runtime implementations
+Search, answer, and AI discovery requirements now span many surfaces: HTML metadata, structured data, robots policy, sitemaps, crawler controls, accessibility baselines, social graph previews, and performance signals. Teams need one durable source for these requirements so product changes, content operations, and technical implementation stay aligned.
 
-## Canonical layout
+This pack helps teams:
 
-- repo-local source ADRs: `.ssot/adr/`
-- repo-local source SPECs: `.ssot/specs/`
-- packaged ADR templates: `src/seo_aeo_aieo_governance_pack/templates/adr/`
-- packaged SPEC templates: `src/seo_aeo_aieo_governance_pack/templates/specs/`
+- apply reviewed SEO, AEO, and AiEO requirements quickly across projects
+- keep search metadata, answer extraction, and AI citation requirements consistent
+- give engineering and content teams the same IDs for planning, implementation, and review
+- connect accessibility and performance quality to discoverability governance
+- make release reviews easier by tracing project work back to shared ADRs and SPECs
 
-The repo-local `.ssot` documents are the authored source files in this repository. The packaged templates and manifests are the only shipped distribution artifact and are derived with:
+## Domain Focus
 
-```bash
-python scripts/sync_packaged_docs.py
-```
+The pack focuses on product domains where discoverability, answer quality, and machine-readable metadata directly affect user acquisition, trust, and citation quality:
 
-## Install
+- SEO and organic search governance
+- AEO answer surface governance
+- AiEO citation and provenance governance
+- robots and crawler control policy
+- sitemap and discovery artifact policy
+- HTML head metadata and canonical URL policy
+- structured data vocabulary and encoding quality
+- social preview metadata for Open Graph and X / Twitter Cards
+- accessibility baseline governance through WCAG 2.1 AA
+- web performance quality using Core Web Vitals and supporting metrics
+- AI crawler controls and experimental `llms.txt` handling
 
-```bash
-python -m pip install seo-aeo-aieo-governance-pack
-```
-
-## Programmatic usage
-
-```python
-from seo_aeo_aieo_governance_pack import load_document_manifest, read_packaged_document_text
-
-adr_manifest = load_document_manifest("adr")
-spec_manifest = load_document_manifest("spec")
-print(adr_manifest[0]["id"])
-print(spec_manifest[0]["id"])
-
-text = read_packaged_document_text("spec", "SPEC-0801-aeo-answer-surface-contract.yaml")
-print(text[:120])
-```
-
-## Initial upstream documents
+## Included ADRs
 
 - `adr:0800` SEO, AEO, and AiEO documents ship as an installable extension pack
 - `adr:0801` crawl control is distinct from indexing control
@@ -84,6 +69,9 @@ print(text[:120])
 - `adr:0809` `llms.txt` is experimental and must not outrank canonical surfaces
 - `adr:0810` performance metrics use standards-backed authority where available
 - `adr:0811` derived tooling metrics remain separate from web-platform normative metrics
+
+## Included SPECs
+
 - `spc:0800` SEO governance surface
 - `spc:0801` AEO answer surface contract
 - `spc:0802` AiEO citation and provenance contract
@@ -106,10 +94,71 @@ print(text[:120])
 - `spc:0819` Long Tasks responsiveness contract
 - `spc:0820` Total Blocking Time operator contract
 
-## Release notes
+## Install With uv
 
-This repository includes reusable [`cobycloud/actions`](https://github.com/cobycloud/actions) workflows for:
+Install the pack into a project environment:
 
-- CI
-- GitHub release creation
-- PyPI publishing
+```bash
+uv add seo-aeo-aieo-governance-pack
+```
+
+Install it alongside the SSOT Registry CLI:
+
+```bash
+uv add ssot-registry seo-aeo-aieo-governance-pack
+```
+
+Run without adding dependencies to a project:
+
+```bash
+uvx --from ssot-registry --with seo-aeo-aieo-governance-pack ssot --help
+```
+
+## Install With The SSOT Registry Pack CLI
+
+Pack-enabled SSOT Registry environments can install and synchronize packs through the pack command surface:
+
+```bash
+uvx --from ssot-registry ssot pack install seo-aeo-aieo-governance-pack
+uvx --from ssot-registry ssot pack sync . seo-aeo-aieo-governance-pack
+```
+
+## Use With The SSOT Registry CLI
+
+After the pack is installed in the same environment as `ssot-registry`, synchronize ADRs and SPECs into a target repository:
+
+```bash
+uv run ssot adr sync .
+uv run ssot spec sync .
+```
+
+Review the synchronized governance surface:
+
+```bash
+uv run ssot adr list .
+uv run ssot spec list .
+uv run ssot spec get . --id spc:0805
+```
+
+Use the IDs from this pack when linking project features, tests, claims, and release evidence in your local `.ssot` registry.
+
+## Programmatic Usage
+
+```python
+from seo_aeo_aieo_governance_pack import load_document_manifest, read_packaged_document_text
+
+adr_manifest = load_document_manifest("adr")
+spec_manifest = load_document_manifest("spec")
+
+print(adr_manifest[0]["id"])
+print(spec_manifest[0]["id"])
+
+text = read_packaged_document_text("spec", "SPEC-0801-aeo-answer-surface-contract.yaml")
+print(text[:120])
+```
+
+## Resources
+
+- GitHub repository: [groupsum/seo-aeo-aieo-governance-pack](https://github.com/groupsum/seo-aeo-aieo-governance-pack)
+- PyPI package: [seo-aeo-aieo-governance-pack](https://pypi.org/project/seo-aeo-aieo-governance-pack/)
+- SSOT Registry: [ssot-registry](https://pypi.org/project/ssot-registry/)
