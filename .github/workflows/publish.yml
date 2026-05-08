@@ -4,14 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       semver:
-        description: Semver bump type
+        description: Release bump type
         required: true
         default: patch
         type: choice
         options:
           - patch
           - minor
-          - major
+          - finalize
       publish_to_github_release:
         description: Create a GitHub release for the bumped tag
         required: true
@@ -111,7 +111,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pyproject.toml CHANGELOG.md src/seo_aeo_aieo_governance_pack/__init__.py
+          git add pyproject.toml CHANGELOG.md src/seo_aeo_aieo_governance_pack/__init__.py src/seo_aeo_aieo_governance_pack/templates
           git commit -m "chore(release): bump version to ${{ steps.version.outputs.version }}"
           git push origin "HEAD:${{ github.ref_name }}"
           echo "release-ref=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"

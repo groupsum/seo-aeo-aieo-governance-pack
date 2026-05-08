@@ -5,24 +5,34 @@ import re
 from pathlib import Path
 
 
-SEMVER_RE = re.compile(r"^(?P<major>\d+)\.(?P<minor>\d+)\.(?P<patch>\d+)$")
+VERSION_RE = re.compile(
+    r"^(?P<major>\d+)\.(?P<minor>\d+)\.(?P<patch>\d+)(?:\.dev(?P<dev>\d+))?$"
+)
 
 
-def parse_version(version: str) -> tuple[int, int, int]:
-    match = SEMVER_RE.fullmatch(version.strip())
+def parse_version(version: str) -> tuple[int, int, int, int | None]:
+    match = VERSION_RE.fullmatch(version.strip())
     if not match:
         raise ValueError(f"Unsupported version format: {version!r}")
-    return tuple(int(match.group(part)) for part in ("major", "minor", "patch"))
+    major, minor, patch = (int(match.group(part)) for part in ("major", "minor", "patch"))
+    dev = match.group("dev")
+    return major, minor, patch, int(dev) if dev is not None else None
 
 
 def bump_version(version: str, bump: str) -> str:
-    major, minor, patch = parse_version(version)
-    if bump == "major":
-        return f"{major + 1}.0.0"
+    major, minor, patch, dev = parse_version(version)
     if bump == "minor":
-        return f"{major}.{minor + 1}.0"
+        return f"{major}.{minor + 1}.{patch}.dev1"
     if bump == "patch":
-        return f"{major}.{minor}.{patch + 1}"
+        if dev is None:
+            return f"{major}.{minor}.{patch + 1}.dev1"
+        return f"{major}.{minor}.{patch}.dev{dev + 1}"
+    if bump == "finalize":
+        if dev is None:
+            raise ValueError(f"Cannot finalize non-dev release: {version!r}")
+        if dev > 1:
+            return f"{major}.{minor}.{patch + 1}"
+        return f"{major}.{minor}.{patch}"
     raise ValueError(f"Unsupported bump type: {bump}")
 
 
@@ -92,7 +102,7 @@ def update_changelog(changelog_path: Path, version: str) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Bump package version metadata.")
-    parser.add_argument("--bump", choices=("patch", "minor", "major"), required=True)
+    parser.add_argument("--bump", choices=("patch", "minor", "finalize"), required=True)
     parser.add_argument("--pyproject", default="pyproject.toml")
     parser.add_argument(
         "--version-file",
