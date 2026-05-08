@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "adr",
+  "id": "adr:0806",
+  "number": 806,
+  "slug": "accessibility-conformance-is-a-governed-discovery-quality-prerequisite",
+  "title": "Accessibility conformance is a governed discovery-quality prerequisite",
+  "status": "draft",
+  "origin": "extension-pack",
+  "summary": "Accessibility conformance, including WCAG 2.1 AA coverage, is a governed prerequisite for trustworthy discovery and answer surfaces.",
+  "body": "Accessibility conformance SHALL be treated as a governed prerequisite for trustworthy discovery and answer surfaces.\n\nThis pack SHALL include explicit coverage for WCAG 2.1 Level AA as the baseline accessibility contract for governed pages and page templates.\n\nThe presence of correct crawl controls, canonical metadata, structured data, or answer-surface markup SHALL NOT be treated as sufficient when a page materially fails accessibility expectations needed for perceivability, operability, understandability, or robustness.\n\nThis decision treats accessibility as a first-class quality surface that supports discoverability, usable rendering, assistive-technology interoperability, and durable content interpretation across human and machine consumers.\n\nDownstream repositories MAY adopt stricter accessibility requirements, but SHALL NOT weaken the WCAG 2.1 AA baseline defined by this pack.",
+  "decision_date": null,
+  "references": [],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "accessibility",
+    "wcag",
+    "wcag-2.1",
+    "aa",
+    "quality"
+  ]
+}

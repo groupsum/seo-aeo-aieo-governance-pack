@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "spec",
+  "id": "spc:0810",
+  "number": 810,
+  "slug": "wcag-2-1-aa-accessibility-contract",
+  "title": "WCAG 2.1 AA accessibility contract",
+  "status": "draft",
+  "origin": "extension-pack",
+  "summary": "Defines WCAG 2.1 Level AA as the governed accessibility baseline for pages, templates, and answer surfaces covered by this pack.",
+  "body": "The WCAG 2.1 AA accessibility contract SHALL define WCAG 2.1 Level AA as the governed accessibility baseline for pages, templates, and answer surfaces covered by this pack.\n\nThis contract SHALL cover conformance expectations across the four WCAG principles:\n- perceivable\n- operable\n- understandable\n- robust\n\nGoverned implementations SHALL address WCAG 2.1 Level A and Level AA success criteria that materially apply to their rendered pages, components, and user flows, including but not limited to:\n- non-text alternatives for meaningful non-text content\n- sufficient color contrast for text and essential interface states\n- keyboard accessibility for interactive controls and navigation\n- visible focus indication and logical focus order\n- clear labeling, instructions, and error identification for form flows\n- semantic structure that supports headings, landmarks, lists, tables, and assistive-technology parsing\n- reflow and responsive presentation without loss of essential information or functionality\n- name, role, and value exposure for interactive components\n\nThis contract SHALL treat accessibility conformance as a page-quality and user-trust baseline, not as a guarantee of ranking outcome or rich-result display.\n\nDownstream implementations SHOULD evaluate accessibility using both automated checks and human review for criteria that cannot be reliably verified by automation alone.\n\nWhere downstream requirements conflict, the stricter accessibility requirement MAY be adopted, but WCAG 2.1 AA SHALL remain the minimum baseline defined by this pack.",
+  "spec_kind": "normative",
+  "adr_ids": [
+    "adr:0803",
+    "adr:0806"
+  ],
+  "decision_date": null,
+  "references": [],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "accessibility",
+    "wcag",
+    "wcag-2.1",
+    "aa",
+    "a11y"
+  ]
+}

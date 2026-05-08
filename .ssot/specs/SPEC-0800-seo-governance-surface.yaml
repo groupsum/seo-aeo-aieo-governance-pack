@@ -7,13 +7,14 @@
   "title": "SEO governance surface",
   "status": "draft",
   "origin": "extension-pack",
-  "summary": "The SEO governance surface defines the baseline page and site signals required for general search eligibility and search-result quality.",
-  "body": "The SEO governance surface SHALL define the baseline page and site signals required for general search eligibility and search-result quality.\n\nThis surface SHALL cover:\n- unique and descriptive title links\n- appropriate snippet and description hints\n- canonical URL consistency\n- site name inputs\n- favicon eligibility inputs\n- valid page-level metadata\n- crawlable internal links\n- stable URL structure\n- indexable primary resource types\n\nThe SEO governance surface SHALL assume that:\n- appearance hints influence rendering but do not guarantee display\n- page metadata must correspond to the visible and canonical resource\n- canonical, sitemap, and internal-link signals should reinforce each other\n\nDownstream implementations MAY add site-specific SEO controls, but SHALL NOT weaken the baseline contract defined here.",
+  "summary": "The SEO governance surface defines the baseline page and site signals required for general search eligibility, search-result quality, and accessible page consumption.",
+  "body": "The SEO governance surface SHALL define the baseline page and site signals required for general search eligibility, search-result quality, and accessible page consumption.\n\nThis surface SHALL cover:\n- unique and descriptive title links\n- appropriate snippet and description hints\n- canonical URL consistency\n- site name inputs\n- favicon eligibility inputs\n- valid page-level metadata\n- crawlable internal links\n- stable URL structure\n- indexable primary resource types\n- baseline accessibility conformance for governed pages\n\nThe SEO governance surface SHALL assume that:\n- appearance hints influence rendering but do not guarantee display\n- page metadata must correspond to the visible and canonical resource\n- canonical, sitemap, and internal-link signals should reinforce each other\n- accessibility failures can materially degrade discoverability, usability, and content interpretation even when technical SEO signals are present\n\nThe accessibility baseline for governed pages SHALL be defined by the dedicated WCAG 2.1 AA accessibility contract.\n\nDownstream implementations MAY add site-specific SEO controls, but SHALL NOT weaken the baseline contract defined here.",
   "spec_kind": "normative",
   "adr_ids": [
     "adr:0800",
     "adr:0802",
-    "adr:0803"
+    "adr:0803",
+    "adr:0806"
   ],
   "decision_date": null,
   "references": [],
@@ -24,6 +25,7 @@
     "seo",
     "governance",
     "canonical",
-    "metadata"
+    "metadata",
+    "accessibility"
   ]
 }
