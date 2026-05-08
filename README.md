@@ -5,6 +5,7 @@
 <p>
   <a href="https://pypi.org/project/seo-aeo-aieo-governance-pack/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/seo-aeo-aieo-governance-pack.svg"></a>
   <a href="https://pepy.tech/projects/seo-aeo-aieo-governance-pack"><img alt="Downloads" src="https://static.pepy.tech/badge/seo-aeo-aieo-governance-pack"></a>
+  <a href="https://hits.sh/github.com/groupsum/seo-aeo-aieo-governance-pack/"><img alt="Hits" src="https://hits.sh/github.com/groupsum/seo-aeo-aieo-governance-pack.svg"></a>
   <a href="https://pypi.org/project/seo-aeo-aieo-governance-pack/"><img alt="Python versions" src="https://img.shields.io/pypi/pyversions/seo-aeo-aieo-governance-pack.svg"></a>
   <a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/pypi/l/seo-aeo-aieo-governance-pack.svg"></a>
   <a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/ci.yml/badge.svg?branch=master"></a>
