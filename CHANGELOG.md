@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4
+
+- Pending release notes.
+
 ## 0.1.3
 
 - Added `adr:0806` to govern accessibility conformance as a discovery-quality prerequisite.

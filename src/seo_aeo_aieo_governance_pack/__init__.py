@@ -1,4 +1,4 @@
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 
 from .templates import load_document_manifest, read_packaged_document_bytes, read_packaged_document_text
 
