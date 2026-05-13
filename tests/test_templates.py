@@ -1,7 +1,13 @@
 from __future__ import annotations
 
 import json
+from pathlib import Path
 import unittest
+
+try:
+    import tomllib
+except ModuleNotFoundError:
+    import tomli as tomllib
 
 from seo_aeo_aieo_governance_pack import (
     __pypi_package_name__,
@@ -17,13 +23,17 @@ from seo_aeo_aieo_governance_pack import (
 )
 
 
+def _project_version() -> str:
+    return tomllib.loads(Path("pyproject.toml").read_text(encoding="utf-8"))["project"]["version"]
+
+
 class TemplateManifestTests(unittest.TestCase):
 
     def test_pack_metadata_contract_is_exposed(self) -> None:
         metadata = load_pack_metadata()
         self.assertEqual("seo-aeo-aieo-governance-pack", __ssot_package_name__)
         self.assertEqual("seo-aeo-aieo-governance-pack", __pypi_package_name__)
-        self.assertEqual("0.1.4", __version__)
+        self.assertEqual(_project_version(), __version__)
         self.assertEqual("1.0.0", metadata["schema_version"])
         self.assertEqual("seo-aeo-aieo-governance-pack", metadata["ssot_package_name"])
         self.assertEqual("seo-aeo-aieo-governance-pack", metadata["pypi_package_name"])
@@ -32,7 +42,7 @@ class TemplateManifestTests(unittest.TestCase):
         self.assertEqual("extension-pack", metadata["trust"]["origin"])
         self.assertEqual("extension-pack:seo-aeo-aieo-governance-pack", metadata["trust"]["reservation_owner"])
         self.assertEqual("1.0.0", load_pack_schema_version())
-        self.assertEqual("0.1.4", metadata["version"])
+        self.assertEqual(_project_version(), metadata["version"])
 
     def test_pack_manifest_contract_is_exposed(self) -> None:
         manifest = load_pack_manifest()

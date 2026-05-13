@@ -73,19 +73,6 @@ def replace_pyproject_version(pyproject_path: Path, version: str) -> None:
     pyproject_path.write_text("".join(lines), encoding="utf-8")
 
 
-def replace_dunder_version(version_file: Path, version: str) -> None:
-    text = version_file.read_text(encoding="utf-8")
-    updated, count = re.subn(
-        r'^__version__\s*=\s*"[^"]+"$',
-        f'__version__ = "{version}"',
-        text,
-        count=1,
-        flags=re.MULTILINE,
-    )
-    if count != 1:
-        raise ValueError(f"Could not replace __version__ in {version_file}")
-    version_file.write_text(updated, encoding="utf-8")
-
 
 def update_changelog(changelog_path: Path, version: str) -> None:
     text = changelog_path.read_text(encoding="utf-8") if changelog_path.exists() else "# Changelog\n"
@@ -104,23 +91,17 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Bump package version metadata.")
     parser.add_argument("--bump", choices=("patch", "minor", "finalize"), required=True)
     parser.add_argument("--pyproject", default="pyproject.toml")
-    parser.add_argument(
-        "--version-file",
-        default="src/seo_aeo_aieo_governance_pack/__init__.py",
-    )
     parser.add_argument("--changelog", default="CHANGELOG.md")
     parser.add_argument("--write", action="store_true")
     args = parser.parse_args()
 
     pyproject_path = Path(args.pyproject)
-    version_file = Path(args.version_file)
     changelog_path = Path(args.changelog)
 
     current = read_project_version(pyproject_path)
     bumped = bump_version(current, args.bump)
     if args.write:
         replace_pyproject_version(pyproject_path, bumped)
-        replace_dunder_version(version_file, bumped)
         update_changelog(changelog_path, bumped)
     print(bumped)
     return 0
