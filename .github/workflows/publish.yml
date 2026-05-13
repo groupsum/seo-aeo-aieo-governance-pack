@@ -77,12 +77,9 @@ jobs:
           from pathlib import Path
 
           version = Path("pyproject.toml").read_text(encoding="utf-8")
-          module = Path("src/seo_aeo_aieo_governance_pack/__init__.py").read_text(encoding="utf-8")
           target = "${{ steps.version.outputs.version }}"
           if target not in version:
               raise SystemExit("version not found in pyproject.toml")
-          if target not in module:
-              raise SystemExit("version not found in package __init__.py")
           changelog = Path("CHANGELOG.md").read_text(encoding="utf-8")
           start = changelog.find(f"## {target}")
           if start == -1:
@@ -111,7 +108,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pyproject.toml CHANGELOG.md src/seo_aeo_aieo_governance_pack/__init__.py src/seo_aeo_aieo_governance_pack/templates
+          git add pyproject.toml CHANGELOG.md src/seo_aeo_aieo_governance_pack/templates
           git commit -m "chore(release): bump version to ${{ steps.version.outputs.version }}"
           git push origin "HEAD:${{ github.ref_name }}"
           echo "release-ref=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"

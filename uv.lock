@@ -83,7 +83,6 @@ version = "0.1.4"
 source = { editable = "." }
 dependencies = [
     { name = "ssot-pack-contracts" },
-    { name = "tomli", marker = "python_full_version < '3.11'" },
 ]
 
 [package.dev-dependencies]
@@ -92,10 +91,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "ssot-pack-contracts", editable = "../ssot-registry/pkgs/ssot-pack-contracts" },
-    { name = "tomli", marker = "python_full_version < '3.11'", specifier = ">=2.0.1" },
-]
+requires-dist = [{ name = "ssot-pack-contracts", editable = "../ssot-registry/pkgs/ssot-pack-contracts" }]
 
 [package.metadata.requires-dev]
 dev = [{ name = "pytest", specifier = ">=8.0" }]
