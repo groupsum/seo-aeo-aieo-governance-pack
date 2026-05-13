@@ -1,0 +1,32 @@
+{
+    "schema_version":  "1.0.0",
+    "ssot_package_name":  "seo-aeo-aieo-governance-pack",
+    "origin":  {
+                   "id":  "pack:seo-aeo-aieo-governance",
+                   "package_name":  "seo-aeo-aieo-governance-pack",
+                   "import_name":  "seo_aeo_aieo_governance_pack",
+                   "kind":  "governance-pack",
+                   "title":  "SEO, AEO, and AiEO Governance Pack",
+                   "description":  "Installable SSOT governance pack for SEO, AEO, and AiEO documents.",
+                   "homepage":  "https://github.com/groupsum/seo-aeo-aieo-governance-pack",
+                   "repository":  "https://github.com/groupsum/seo-aeo-aieo-governance-pack"
+               },
+    "compatibility":  {
+                          "python":  ">=3.10,<3.15",
+                          "ssot_registry_schema":  ">=0.4.0",
+                          "ssot_pack_contract":  ">=0.2.17,<0.3.0"
+                      },
+    "trust":  {
+                  "trusted_by_default":  true,
+                  "origin":  "extension-pack",
+                  "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack"
+              },
+    "documents":  {
+                      "adr":  {
+                                  "manifest_path":  "templates/adr/manifest.json"
+                              },
+                      "spec":  {
+                                   "manifest_path":  "templates/specs/manifest.json"
+                               }
+                  }
+}

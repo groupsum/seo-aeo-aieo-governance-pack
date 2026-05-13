@@ -1,10 +1,5 @@
-__version__ = "0.1.4"
+from __future__ import annotations
 
-from .templates import load_document_manifest, read_packaged_document_bytes, read_packaged_document_text
+from ssot_pack_contracts import bind_pack_contract
 
-__all__ = [
-    "__version__",
-    "load_document_manifest",
-    "read_packaged_document_bytes",
-    "read_packaged_document_text",
-]
+globals().update(bind_pack_contract(__name__))

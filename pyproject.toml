@@ -10,7 +10,10 @@ readme = "README.md"
 requires-python = ">=3.10,<3.15"
 license = "Apache-2.0"
 authors = [{ name = "Jacob Stewart", email = "jacob@swarmauri.com" }]
-dependencies = ["tomli>=2.0.1; python_version < '3.11'"]
+dependencies = [
+  "ssot-pack-contracts>=0.2.17,<0.3.0",
+  "tomli>=2.0.1; python_version < '3.11'",
+]
 keywords = [
   "ssot",
   "ssot-registry",
@@ -63,8 +66,15 @@ package-dir = {"" = "src"}
 where = ["src"]
 
 [tool.setuptools.package-data]
+"seo_aeo_aieo_governance_pack" = ["metadata.json"]
 "seo_aeo_aieo_governance_pack.templates.adr" = ["*.json", "*.yaml"]
 "seo_aeo_aieo_governance_pack.templates.specs" = ["*.json", "*.yaml"]
 
 [dependency-groups]
-dev = []
+dev = [
+  "pytest>=8.0",
+]
+
+[tool.uv.sources]
+ssot-pack-contracts = { path = "../ssot-registry/pkgs/ssot-pack-contracts", editable = true }
+

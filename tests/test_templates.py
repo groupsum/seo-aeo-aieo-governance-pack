@@ -3,10 +3,44 @@ from __future__ import annotations
 import json
 import unittest
 
-from seo_aeo_aieo_governance_pack import load_document_manifest, read_packaged_document_text
+from seo_aeo_aieo_governance_pack import (
+    __pypi_package_name__,
+    __ssot_package_name__,
+    __version__,
+    get_packaged_document_entry,
+    list_packaged_document_ids,
+    load_document_manifest,
+    load_pack_manifest,
+    load_pack_metadata,
+    load_pack_schema_version,
+    read_packaged_document_text,
+)
 
 
 class TemplateManifestTests(unittest.TestCase):
+
+    def test_pack_metadata_contract_is_exposed(self) -> None:
+        metadata = load_pack_metadata()
+        self.assertEqual("seo-aeo-aieo-governance-pack", __ssot_package_name__)
+        self.assertEqual("seo-aeo-aieo-governance-pack", __pypi_package_name__)
+        self.assertEqual("0.1.4", __version__)
+        self.assertEqual("1.0.0", metadata["schema_version"])
+        self.assertEqual("seo-aeo-aieo-governance-pack", metadata["ssot_package_name"])
+        self.assertEqual("seo-aeo-aieo-governance-pack", metadata["pypi_package_name"])
+        self.assertEqual("seo-aeo-aieo-governance-pack", metadata["origin"]["package_name"])
+        self.assertEqual("seo_aeo_aieo_governance_pack", metadata["origin"]["import_name"])
+        self.assertEqual("extension-pack", metadata["trust"]["origin"])
+        self.assertEqual("extension-pack:seo-aeo-aieo-governance-pack", metadata["trust"]["reservation_owner"])
+        self.assertEqual("1.0.0", load_pack_schema_version())
+        self.assertEqual("0.1.4", metadata["version"])
+
+    def test_pack_manifest_contract_is_exposed(self) -> None:
+        manifest = load_pack_manifest()
+        self.assertEqual("seo-aeo-aieo-governance-pack", manifest["metadata"]["origin"]["package_name"])
+        self.assertIn("adr", manifest["documents"])
+        self.assertIn("spec", manifest["documents"])
+        self.assertEqual("adr:0800", get_packaged_document_entry("adr:0800")["id"])
+        self.assertEqual(33, len(list_packaged_document_ids()))
     def test_adr_manifest_has_expected_rows(self) -> None:
         manifest = load_document_manifest("adr")
         self.assertEqual(12, len(manifest))
@@ -88,3 +122,4 @@ class TemplateManifestTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
