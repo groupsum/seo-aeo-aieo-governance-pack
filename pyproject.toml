@@ -7,7 +7,7 @@ name = "seo-aeo-aieo-governance-pack"
 version = "0.1.4"
 description = "Installable ADR and SPEC extension pack for SEO, AEO, and AiEO governance."
 readme = "README.md"
-requires-python = ">=3.10,<3.14"
+requires-python = ">=3.10,<3.15"
 license = "Apache-2.0"
 authors = [{ name = "Jacob Stewart", email = "jacob@swarmauri.com" }]
 dependencies = ["tomli>=2.0.1; python_version < '3.11'"]
@@ -40,6 +40,7 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
   "Topic :: Internet",
   "Topic :: Internet :: WWW/HTTP",
   "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
