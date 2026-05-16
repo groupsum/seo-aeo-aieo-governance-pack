@@ -74,6 +74,4 @@ dev = [
   "pytest>=8.0",
 ]
 
-[tool.uv.sources]
-ssot-pack-contracts = { path = "../ssot-registry/pkgs/ssot-pack-contracts", editable = true }
 

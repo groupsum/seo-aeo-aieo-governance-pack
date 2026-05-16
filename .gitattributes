@@ -1,0 +1,5 @@
+/.gitattributes text eol=lf
+*.toml text eol=lf
+*.yaml text eol=lf
+src/**/templates/**/manifest.json text eol=lf
+uv.lock text eol=lf
