@@ -1,527 +1,401 @@
 [
-    {
-        "id":  "spc:0800",
-        "number":  800,
-        "slug":  "seo-governance-surface",
-        "title":  "SEO governance surface",
-        "filename":  "SPEC-0800-seo-governance-surface.yaml",
-        "target_path":  ".ssot/specs/SPEC-0800-seo-governance-surface.yaml",
-        "sha256":  "0559b0d7766c29bf29dc2f081494344981ccd1019c40426b60630c3caf1a7e61",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0801",
-        "number":  801,
-        "slug":  "aeo-answer-surface-contract",
-        "title":  "AEO answer surface contract",
-        "filename":  "SPEC-0801-aeo-answer-surface-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0801-aeo-answer-surface-contract.yaml",
-        "sha256":  "7821372d881ca2192648af092f67d5898ce98b302e7406e70866abdda5403425",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0802",
-        "number":  802,
-        "slug":  "aieo-citation-and-provenance-contract",
-        "title":  "AiEO citation and provenance contract",
-        "filename":  "SPEC-0802-aieo-citation-and-provenance-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0802-aieo-citation-and-provenance-contract.yaml",
-        "sha256":  "03027b5f73f2039243f3dc1a84a7b6f9330da26a50bea8a79eba16dc029d062e",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "governance"
-    },
-    {
-        "id":  "spc:0803",
-        "number":  803,
-        "slug":  "robots-exclusion-protocol-contract",
-        "title":  "Robots exclusion protocol contract",
-        "filename":  "SPEC-0803-robots-exclusion-protocol-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0803-robots-exclusion-protocol-contract.yaml",
-        "sha256":  "c93308b33e2a781df154627e2bd74cbf19470249d1dcdd84e00f25b1fec3dba4",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0804",
-        "number":  804,
-        "slug":  "sitemap-and-sitemap-index-contract",
-        "title":  "Sitemap and sitemap-index contract",
-        "filename":  "SPEC-0804-sitemap-and-sitemap-index-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0804-sitemap-and-sitemap-index-contract.yaml",
-        "sha256":  "9b7ecb5ad9316de90704b801c54368b920d560963d39bfdd856b9dc36d712154",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0805",
-        "number":  805,
-        "slug":  "html-head-metadata-and-canonical-link-contract",
-        "title":  "HTML head metadata and canonical link contract",
-        "filename":  "SPEC-0805-html-head-metadata-and-canonical-link-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0805-html-head-metadata-and-canonical-link-contract.yaml",
-        "sha256":  "42734ad36553e7790037eb7a7f08d6fb15f65c98f7fcbec26f5a2b6b50038cab",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0806",
-        "number":  806,
-        "slug":  "structured-data-vocabulary-and-encoding-contract",
-        "title":  "Structured data vocabulary and encoding contract",
-        "filename":  "SPEC-0806-structured-data-vocabulary-and-encoding-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0806-structured-data-vocabulary-and-encoding-contract.yaml",
-        "sha256":  "37411dc0cbe31e127ca3d5f010a1b233a5ec32c6e8a0f4c9307b683bb6c0d778",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0807",
-        "number":  807,
-        "slug":  "google-search-eligibility-and-structured-data-quality-contract",
-        "title":  "Google Search eligibility and structured data quality contract",
-        "filename":  "SPEC-0807-google-search-eligibility-and-structured-data-quality-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0807-google-search-eligibility-and-structured-data-quality-contract.yaml",
-        "sha256":  "3edfed92665707bc2c769e40b05fd409241dadac0758cb554371c1e5c74c1d34",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0808",
-        "number":  808,
-        "slug":  "google-ai-features-eligibility-contract",
-        "title":  "Google AI features eligibility contract",
-        "filename":  "SPEC-0808-google-ai-features-eligibility-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0808-google-ai-features-eligibility-contract.yaml",
-        "sha256":  "b7e5f4f7416a54cfef3208c9fb8af28fe201617cafd905996d54be487c8c7a8b",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0809",
-        "number":  809,
-        "slug":  "helpful-reliable-people-first-content-contract",
-        "title":  "Helpful, reliable, people-first content contract",
-        "filename":  "SPEC-0809-helpful-reliable-people-first-content-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0809-helpful-reliable-people-first-content-contract.yaml",
-        "sha256":  "1fd8fc9c357f414cd09f8422dfc3149174e756bdc46b5ad2d89d8889d15b50d3",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0810",
-        "number":  810,
-        "slug":  "wcag-2-1-aa-accessibility-contract",
-        "title":  "WCAG 2.1 AA accessibility contract",
-        "filename":  "SPEC-0810-wcag-2-1-aa-accessibility-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0810-wcag-2-1-aa-accessibility-contract.yaml",
-        "sha256":  "7f55a28eb33944a90c7a0a5bc8e860bcf49467c8556da1b425d8408914b38ed2",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0811",
-        "number":  811,
-        "slug":  "core-web-vitals-performance-contract",
-        "title":  "Core Web Vitals performance contract",
-        "filename":  "SPEC-0811-core-web-vitals-performance-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0811-core-web-vitals-performance-contract.yaml",
-        "sha256":  "68dd081437dbcbff83c2524fac1b7ad16412da154f52fa975b2401fe8b1d8767",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0812",
-        "number":  812,
-        "slug":  "open-graph-contract",
-        "title":  "Open Graph contract",
-        "filename":  "SPEC-0812-open-graph-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0812-open-graph-contract.yaml",
-        "sha256":  "7eea620ae954204bbb73a5a0a7fe86a68c99da94205d58d76ffd82d3ecc131ed",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0813",
-        "number":  813,
-        "slug":  "x-twitter-cards-contract",
-        "title":  "X / Twitter Cards contract",
-        "filename":  "SPEC-0813-x-twitter-cards-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0813-x-twitter-cards-contract.yaml",
-        "sha256":  "b81ecc301ebd7252178787f873cf80038305b39ab4e138c5eb160ee956141934",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0814",
-        "number":  814,
-        "slug":  "dcmi-interoperable-metadata-contract",
-        "title":  "DCMI interoperable metadata contract",
-        "filename":  "SPEC-0814-dcmi-interoperable-metadata-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0814-dcmi-interoperable-metadata-contract.yaml",
-        "sha256":  "4de5225333c0002176359f0b5c7eaea4e09fbc8235048dda883a9266466fab8b",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0815",
-        "number":  815,
-        "slug":  "openai-crawler-controls-contract",
-        "title":  "OpenAI crawler controls contract",
-        "filename":  "SPEC-0815-openai-crawler-controls-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0815-openai-crawler-controls-contract.yaml",
-        "sha256":  "58c7dc6037311f6eaa7246c504e9df2cae230009f941374172d3a05711ff68ed",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0816",
-        "number":  816,
-        "slug":  "llmstxt-experimental-contract",
-        "title":  "`llms.txt` experimental contract",
-        "filename":  "SPEC-0816-llmstxt-experimental-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0816-llmstxt-experimental-contract.yaml",
-        "sha256":  "967e61f81f15c95bd89ecf0ed3abb24e7af745e5e10a9c3374c1128040f17418",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0817",
-        "number":  817,
-        "slug":  "first-contentful-paint-contract",
-        "title":  "First Contentful Paint contract",
-        "filename":  "SPEC-0817-first-contentful-paint-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0817-first-contentful-paint-contract.yaml",
-        "sha256":  "71d5e2a975707da12175227395bd9869864d8cf65d69962841c2077493a6b573",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0818",
-        "number":  818,
-        "slug":  "largest-contentful-paint-contract",
-        "title":  "Largest Contentful Paint contract",
-        "filename":  "SPEC-0818-largest-contentful-paint-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0818-largest-contentful-paint-contract.yaml",
-        "sha256":  "fb169075abf0eb46c125e4f49a0b5e2de69de53240fe3fd70b8160d42aad4981",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0819",
-        "number":  819,
-        "slug":  "long-tasks-responsiveness-contract",
-        "title":  "Long Tasks responsiveness contract",
-        "filename":  "SPEC-0819-long-tasks-responsiveness-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0819-long-tasks-responsiveness-contract.yaml",
-        "sha256":  "db86045fd556a2150e82e1e0de145491d29428e82f51c80b05e5855cc254efa0",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "normative"
-    },
-    {
-        "id":  "spc:0820",
-        "number":  820,
-        "slug":  "total-blocking-time-operator-contract",
-        "title":  "Total Blocking Time operator contract",
-        "filename":  "SPEC-0820-total-blocking-time-operator-contract.yaml",
-        "target_path":  ".ssot/specs/SPEC-0820-total-blocking-time-operator-contract.yaml",
-        "sha256":  "4c08437f88845cbff29c777e841a16f7432422d7621175e784f801089b18fcc5",
-        "origin":  "extension-pack",
-        "reservation_owner":  "extension-pack:seo-aeo-aieo-governance-pack",
-        "immutable":  true,
-        "minimum_schema_version":  "4",
-        "introduced_in":  "0.1.3",
-        "status":  "draft",
-        "supersedes":  [
-
-                       ],
-        "superseded_by":  [
-
-                          ],
-        "status_notes":  [
-
-                         ],
-        "kind":  "governance"
-    }
+  {
+    "id": "spc:0800",
+    "number": 800,
+    "slug": "seo-governance-surface",
+    "title": "SEO governance surface",
+    "filename": "SPEC-0800-seo-governance-surface.yaml",
+    "target_path": ".ssot/specs/SPEC-0800-seo-governance-surface.yaml",
+    "sha256": "0559b0d7766c29bf29dc2f081494344981ccd1019c40426b60630c3caf1a7e61",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0801",
+    "number": 801,
+    "slug": "aeo-answer-surface-contract",
+    "title": "AEO answer surface contract",
+    "filename": "SPEC-0801-aeo-answer-surface-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0801-aeo-answer-surface-contract.yaml",
+    "sha256": "7821372d881ca2192648af092f67d5898ce98b302e7406e70866abdda5403425",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0802",
+    "number": 802,
+    "slug": "aieo-citation-and-provenance-contract",
+    "title": "AiEO citation and provenance contract",
+    "filename": "SPEC-0802-aieo-citation-and-provenance-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0802-aieo-citation-and-provenance-contract.yaml",
+    "sha256": "03027b5f73f2039243f3dc1a84a7b6f9330da26a50bea8a79eba16dc029d062e",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "governance"
+  },
+  {
+    "id": "spc:0803",
+    "number": 803,
+    "slug": "robots-exclusion-protocol-contract",
+    "title": "Robots exclusion protocol contract",
+    "filename": "SPEC-0803-robots-exclusion-protocol-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0803-robots-exclusion-protocol-contract.yaml",
+    "sha256": "c93308b33e2a781df154627e2bd74cbf19470249d1dcdd84e00f25b1fec3dba4",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0804",
+    "number": 804,
+    "slug": "sitemap-and-sitemap-index-contract",
+    "title": "Sitemap and sitemap-index contract",
+    "filename": "SPEC-0804-sitemap-and-sitemap-index-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0804-sitemap-and-sitemap-index-contract.yaml",
+    "sha256": "9b7ecb5ad9316de90704b801c54368b920d560963d39bfdd856b9dc36d712154",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0805",
+    "number": 805,
+    "slug": "html-head-metadata-and-canonical-link-contract",
+    "title": "HTML head metadata and canonical link contract",
+    "filename": "SPEC-0805-html-head-metadata-and-canonical-link-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0805-html-head-metadata-and-canonical-link-contract.yaml",
+    "sha256": "42734ad36553e7790037eb7a7f08d6fb15f65c98f7fcbec26f5a2b6b50038cab",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0806",
+    "number": 806,
+    "slug": "structured-data-vocabulary-and-encoding-contract",
+    "title": "Structured data vocabulary and encoding contract",
+    "filename": "SPEC-0806-structured-data-vocabulary-and-encoding-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0806-structured-data-vocabulary-and-encoding-contract.yaml",
+    "sha256": "37411dc0cbe31e127ca3d5f010a1b233a5ec32c6e8a0f4c9307b683bb6c0d778",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0807",
+    "number": 807,
+    "slug": "google-search-eligibility-and-structured-data-quality-contract",
+    "title": "Google Search eligibility and structured data quality contract",
+    "filename": "SPEC-0807-google-search-eligibility-and-structured-data-quality-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0807-google-search-eligibility-and-structured-data-quality-contract.yaml",
+    "sha256": "3edfed92665707bc2c769e40b05fd409241dadac0758cb554371c1e5c74c1d34",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0808",
+    "number": 808,
+    "slug": "google-ai-features-eligibility-contract",
+    "title": "Google AI features eligibility contract",
+    "filename": "SPEC-0808-google-ai-features-eligibility-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0808-google-ai-features-eligibility-contract.yaml",
+    "sha256": "b7e5f4f7416a54cfef3208c9fb8af28fe201617cafd905996d54be487c8c7a8b",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0809",
+    "number": 809,
+    "slug": "helpful-reliable-people-first-content-contract",
+    "title": "Helpful, reliable, people-first content contract",
+    "filename": "SPEC-0809-helpful-reliable-people-first-content-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0809-helpful-reliable-people-first-content-contract.yaml",
+    "sha256": "1fd8fc9c357f414cd09f8422dfc3149174e756bdc46b5ad2d89d8889d15b50d3",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0810",
+    "number": 810,
+    "slug": "wcag-2-1-aa-accessibility-contract",
+    "title": "WCAG 2.1 AA accessibility contract",
+    "filename": "SPEC-0810-wcag-2-1-aa-accessibility-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0810-wcag-2-1-aa-accessibility-contract.yaml",
+    "sha256": "7f55a28eb33944a90c7a0a5bc8e860bcf49467c8556da1b425d8408914b38ed2",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0811",
+    "number": 811,
+    "slug": "core-web-vitals-performance-contract",
+    "title": "Core Web Vitals performance contract",
+    "filename": "SPEC-0811-core-web-vitals-performance-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0811-core-web-vitals-performance-contract.yaml",
+    "sha256": "68dd081437dbcbff83c2524fac1b7ad16412da154f52fa975b2401fe8b1d8767",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0812",
+    "number": 812,
+    "slug": "open-graph-contract",
+    "title": "Open Graph contract",
+    "filename": "SPEC-0812-open-graph-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0812-open-graph-contract.yaml",
+    "sha256": "7eea620ae954204bbb73a5a0a7fe86a68c99da94205d58d76ffd82d3ecc131ed",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0813",
+    "number": 813,
+    "slug": "x-twitter-cards-contract",
+    "title": "X / Twitter Cards contract",
+    "filename": "SPEC-0813-x-twitter-cards-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0813-x-twitter-cards-contract.yaml",
+    "sha256": "b81ecc301ebd7252178787f873cf80038305b39ab4e138c5eb160ee956141934",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0814",
+    "number": 814,
+    "slug": "dcmi-interoperable-metadata-contract",
+    "title": "DCMI interoperable metadata contract",
+    "filename": "SPEC-0814-dcmi-interoperable-metadata-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0814-dcmi-interoperable-metadata-contract.yaml",
+    "sha256": "4de5225333c0002176359f0b5c7eaea4e09fbc8235048dda883a9266466fab8b",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0815",
+    "number": 815,
+    "slug": "openai-crawler-controls-contract",
+    "title": "OpenAI crawler controls contract",
+    "filename": "SPEC-0815-openai-crawler-controls-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0815-openai-crawler-controls-contract.yaml",
+    "sha256": "58c7dc6037311f6eaa7246c504e9df2cae230009f941374172d3a05711ff68ed",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0816",
+    "number": 816,
+    "slug": "llmstxt-experimental-contract",
+    "title": "`llms.txt` experimental contract",
+    "filename": "SPEC-0816-llmstxt-experimental-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0816-llmstxt-experimental-contract.yaml",
+    "sha256": "967e61f81f15c95bd89ecf0ed3abb24e7af745e5e10a9c3374c1128040f17418",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0817",
+    "number": 817,
+    "slug": "first-contentful-paint-contract",
+    "title": "First Contentful Paint contract",
+    "filename": "SPEC-0817-first-contentful-paint-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0817-first-contentful-paint-contract.yaml",
+    "sha256": "71d5e2a975707da12175227395bd9869864d8cf65d69962841c2077493a6b573",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0818",
+    "number": 818,
+    "slug": "largest-contentful-paint-contract",
+    "title": "Largest Contentful Paint contract",
+    "filename": "SPEC-0818-largest-contentful-paint-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0818-largest-contentful-paint-contract.yaml",
+    "sha256": "fb169075abf0eb46c125e4f49a0b5e2de69de53240fe3fd70b8160d42aad4981",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0819",
+    "number": 819,
+    "slug": "long-tasks-responsiveness-contract",
+    "title": "Long Tasks responsiveness contract",
+    "filename": "SPEC-0819-long-tasks-responsiveness-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0819-long-tasks-responsiveness-contract.yaml",
+    "sha256": "db86045fd556a2150e82e1e0de145491d29428e82f51c80b05e5855cc254efa0",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  },
+  {
+    "id": "spc:0820",
+    "number": 820,
+    "slug": "total-blocking-time-operator-contract",
+    "title": "Total Blocking Time operator contract",
+    "filename": "SPEC-0820-total-blocking-time-operator-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-0820-total-blocking-time-operator-contract.yaml",
+    "sha256": "4c08437f88845cbff29c777e841a16f7432422d7621175e784f801089b18fcc5",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.4",
+    "status": "draft",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "governance"
+  }
 ]

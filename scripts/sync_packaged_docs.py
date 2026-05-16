@@ -15,6 +15,8 @@ ADR_SOURCE = ROOT / ".ssot" / "adr"
 SPEC_SOURCE = ROOT / ".ssot" / "specs"
 ADR_TARGET = ROOT / "src" / "seo_aeo_aieo_governance_pack" / "templates" / "adr"
 SPEC_TARGET = ROOT / "src" / "seo_aeo_aieo_governance_pack" / "templates" / "specs"
+RESERVATION_OWNER = "extension-pack:seo-aeo-aieo-governance-pack"
+MINIMUM_SCHEMA_VERSION = "0.4.0"
 
 
 def _project_version() -> str:
@@ -56,15 +58,15 @@ def _sync_kind(kind: str, source: Path, target: Path, version: str) -> list[dict
             "filename": path.name,
             "target_path": f".ssot/{'adr' if kind == 'adr' else 'specs'}/{path.name}",
             "sha256": sha256,
-            "origin": payload["origin"],
-            "reservation_owner": payload["origin"],
+            "origin": "extension-pack",
+            "reservation_owner": RESERVATION_OWNER,
             "immutable": True,
-            "minimum_schema_version": 4,
+            "minimum_schema_version": MINIMUM_SCHEMA_VERSION,
             "introduced_in": version,
             "status": payload["status"],
             "supersedes": payload.get("supersedes", []),
             "superseded_by": payload.get("superseded_by", []),
-            "status_notes": payload.get("status_notes", []),
+            "status_notes": [],
         }
         if kind == "spec":
             entry["kind"] = payload["spec_kind"]
