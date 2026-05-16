@@ -11,10 +11,8 @@ except ModuleNotFoundError:  # pragma: no cover
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ADR_SOURCE = ROOT / ".ssot" / "adr"
-SPEC_SOURCE = ROOT / ".ssot" / "specs"
-ADR_TARGET = ROOT / "src" / "seo_aeo_aieo_governance_pack" / "templates" / "adr"
-SPEC_TARGET = ROOT / "src" / "seo_aeo_aieo_governance_pack" / "templates" / "specs"
+ADR_TEMPLATES = ROOT / "src" / "seo_aeo_aieo_governance_pack" / "templates" / "adr"
+SPEC_TEMPLATES = ROOT / "src" / "seo_aeo_aieo_governance_pack" / "templates" / "specs"
 RESERVATION_OWNER = "extension-pack:seo-aeo-aieo-governance-pack"
 MINIMUM_SCHEMA_VERSION = "0.4.0"
 
@@ -36,19 +34,15 @@ def _load_documents(folder: Path) -> list[tuple[Path, dict]]:
     return rows
 
 
-def _sync_kind(kind: str, source: Path, target: Path, version: str) -> list[dict]:
+def _sync_kind(kind: str, templates: Path, version: str) -> list[dict]:
     manifest_rows: list[dict] = []
-    target.mkdir(parents=True, exist_ok=True)
-    for stale in target.glob("*.yaml"):
-        stale.unlink()
-    manifest_path = target / "manifest.json"
+    templates.mkdir(parents=True, exist_ok=True)
+    manifest_path = templates / "manifest.json"
     if manifest_path.exists():
         manifest_path.unlink()
-    for path, payload in _load_documents(source):
+    for path, payload in _load_documents(templates):
         raw_bytes = path.read_bytes()
         sha256 = _sha256_bytes(raw_bytes)
-        target_path = target / path.name
-        target_path.write_bytes(raw_bytes)
 
         entry = {
             "id": payload["id"],
@@ -78,8 +72,8 @@ def _sync_kind(kind: str, source: Path, target: Path, version: str) -> list[dict
 
 def main() -> None:
     version = _project_version()
-    _sync_kind("adr", ADR_SOURCE, ADR_TARGET, version)
-    _sync_kind("spec", SPEC_SOURCE, SPEC_TARGET, version)
+    _sync_kind("adr", ADR_TEMPLATES, version)
+    _sync_kind("spec", SPEC_TEMPLATES, version)
 
 
 if __name__ == "__main__":
