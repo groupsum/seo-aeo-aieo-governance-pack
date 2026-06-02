@@ -16,11 +16,7 @@
   ],
   "decision_date": null,
   "references": [
-    {
-      "label": "Long Tasks API",
-      "url": "https://www.w3.org/TR/longtasks-1/",
-      "kind": "normative"
-    }
+    "normative: Long Tasks API - https://www.w3.org/TR/longtasks-1/"
   ],
   "supersedes": [],
   "superseded_by": [],

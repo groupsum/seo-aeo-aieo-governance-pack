@@ -16,21 +16,9 @@
   ],
   "decision_date": null,
   "references": [
-    {
-      "label": "WCAG 2.1",
-      "url": "https://www.w3.org/TR/WCAG21/",
-      "kind": "normative"
-    },
-    {
-      "label": "How to refer to WCAG 2.1 from other documents",
-      "url": "https://www.w3.org/WAI/WCAG21/Understanding/refer-to-wcag",
-      "kind": "informative"
-    },
-    {
-      "label": "Understanding WCAG 2.1",
-      "url": "https://www.w3.org/WAI/WCAG21/Understanding/intro",
-      "kind": "informative"
-    }
+    "normative: WCAG 2.1 - https://www.w3.org/TR/WCAG21/",
+    "informative: How to refer to WCAG 2.1 from other documents - https://www.w3.org/WAI/WCAG21/Understanding/refer-to-wcag",
+    "informative: Understanding WCAG 2.1 - https://www.w3.org/WAI/WCAG21/Understanding/intro"
   ],
   "supersedes": [],
   "superseded_by": [],

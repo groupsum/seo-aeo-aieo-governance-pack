@@ -16,21 +16,9 @@
   ],
   "decision_date": null,
   "references": [
-    {
-      "label": "Total Blocking Time",
-      "url": "https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time",
-      "kind": "informative"
-    },
-    {
-      "label": "Long Tasks API",
-      "url": "https://www.w3.org/TR/longtasks-1/",
-      "kind": "normative"
-    },
-    {
-      "label": "Paint Timing",
-      "url": "https://www.w3.org/TR/paint-timing/",
-      "kind": "normative"
-    }
+    "informative: Total Blocking Time - https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time",
+    "normative: Long Tasks API - https://www.w3.org/TR/longtasks-1/",
+    "normative: Paint Timing - https://www.w3.org/TR/paint-timing/"
   ],
   "supersedes": [],
   "superseded_by": [],

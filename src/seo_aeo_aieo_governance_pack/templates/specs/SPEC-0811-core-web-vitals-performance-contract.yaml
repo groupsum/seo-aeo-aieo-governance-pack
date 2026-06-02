@@ -18,11 +18,7 @@
   ],
   "decision_date": null,
   "references": [
-    {
-      "label": "Largest Contentful Paint",
-      "url": "https://www.w3.org/TR/largest-contentful-paint/",
-      "kind": "normative"
-    }
+    "normative: Largest Contentful Paint - https://www.w3.org/TR/largest-contentful-paint/"
   ],
   "supersedes": [],
   "superseded_by": [],

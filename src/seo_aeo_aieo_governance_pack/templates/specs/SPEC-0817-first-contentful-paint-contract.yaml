@@ -15,11 +15,7 @@
   ],
   "decision_date": null,
   "references": [
-    {
-      "label": "Paint Timing",
-      "url": "https://www.w3.org/TR/paint-timing/",
-      "kind": "normative"
-    }
+    "normative: Paint Timing - https://www.w3.org/TR/paint-timing/"
   ],
   "supersedes": [],
   "superseded_by": [],

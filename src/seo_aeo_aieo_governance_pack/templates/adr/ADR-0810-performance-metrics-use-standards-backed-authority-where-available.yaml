@@ -11,26 +11,10 @@
   "body": "Governed performance metrics SHALL use standards-backed authority where available and SHALL distinguish standards-track metrics from tool-derived operator metrics.\n\nThis decision classifies:\n- First Contentful Paint (FCP) as anchored to the W3C Paint Timing specification\n- Largest Contentful Paint (LCP) as anchored to the W3C Largest Contentful Paint specification\n- long-task detection as anchored to the W3C Long Tasks API specification\n- Total Blocking Time (TBT) as a derived operator metric used by tooling rather than as a standards-track web-platform metric in its own right\n\nDownstream repositories and operators SHALL NOT treat a derived tooling metric as though it were a normative W3C metric when a standards-backed authority layer already exists.\n\nThis pack SHALL preserve the authority distinction between:\n- web-platform timing semantics\n- operator reporting and thresholds\n- search-adjacent quality interpretation",
   "decision_date": null,
   "references": [
-    {
-      "label": "Paint Timing",
-      "url": "https://www.w3.org/TR/paint-timing/",
-      "kind": "normative"
-    },
-    {
-      "label": "Largest Contentful Paint",
-      "url": "https://www.w3.org/TR/largest-contentful-paint/",
-      "kind": "normative"
-    },
-    {
-      "label": "Long Tasks API",
-      "url": "https://www.w3.org/TR/longtasks-1/",
-      "kind": "normative"
-    },
-    {
-      "label": "Total Blocking Time",
-      "url": "https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time",
-      "kind": "informative"
-    }
+    "normative: Paint Timing - https://www.w3.org/TR/paint-timing/",
+    "normative: Largest Contentful Paint - https://www.w3.org/TR/largest-contentful-paint/",
+    "normative: Long Tasks API - https://www.w3.org/TR/longtasks-1/",
+    "informative: Total Blocking Time - https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time"
   ],
   "supersedes": [],
   "superseded_by": [],
