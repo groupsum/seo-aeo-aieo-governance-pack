@@ -5,7 +5,7 @@
   "number": 810,
   "slug": "performance-metrics-use-standards-backed-authority-where-available",
   "title": "Performance metrics use standards-backed authority where available",
-  "status": "draft",
+  "status": "superseded",
   "origin": "extension-pack",
   "summary": "Governed performance metrics SHALL use standards-backed authority where available and SHALL distinguish standards-track metrics from tool-derived operator metrics.",
   "body": "Governed performance metrics SHALL use standards-backed authority where available and SHALL distinguish standards-track metrics from tool-derived operator metrics.\n\nThis decision classifies:\n- First Contentful Paint (FCP) as anchored to the W3C Paint Timing specification\n- Largest Contentful Paint (LCP) as anchored to the W3C Largest Contentful Paint specification\n- long-task detection as anchored to the W3C Long Tasks API specification\n- Total Blocking Time (TBT) as a derived operator metric used by tooling rather than as a standards-track web-platform metric in its own right\n\nDownstream repositories and operators SHALL NOT treat a derived tooling metric as though it were a normative W3C metric when a standards-backed authority layer already exists.\n\nThis pack SHALL preserve the authority distinction between:\n- web-platform timing semantics\n- operator reporting and thresholds\n- search-adjacent quality interpretation",
@@ -17,8 +17,15 @@
     "informative: Total Blocking Time - https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time"
   ],
   "supersedes": [],
-  "superseded_by": [],
-  "status_notes": [],
+  "superseded_by": [
+    "adr:browser-performance-metrics-and-beacon-transport-are-owned-here"
+  ],
+  "status_notes": [
+    {
+      "date": "2026-08-10",
+      "note": "Superseded by narrower canonical governance documents during the portfolio deduplication."
+    }
+  ],
   "tags": [
     "performance",
     "fcp",

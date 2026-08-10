@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0.dev1
+
+- Removed duplicate performance metric definitions and added a search-performance evidence profile.
+
 ## 0.1.6.dev1
 
 - Pending release notes.

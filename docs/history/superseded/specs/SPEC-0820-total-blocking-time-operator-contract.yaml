@@ -5,7 +5,7 @@
   "number": 820,
   "slug": "total-blocking-time-operator-contract",
   "title": "Total Blocking Time operator contract",
-  "status": "draft",
+  "status": "superseded",
   "origin": "extension-pack",
   "summary": "Defines Total Blocking Time as a governed operator metric derived from long-task behavior and a tooling-defined reporting window, not as a standards-track web-platform metric.",
   "body": "The Total Blocking Time operator contract SHALL define Total Blocking Time as a governed operator metric derived from long-task behavior and a tooling-defined reporting window, not as a standards-track web-platform metric.\n\nThis contract SHALL cover:\n- TBT as a derived tooling metric used for responsiveness diagnostics\n- blocking time as the portion of a long task that exceeds 50 milliseconds\n- operator reporting that sums blocking portions across a defined window after First Contentful Paint and before the tooling's interactive cutoff\n\nThis contract SHALL explicitly state that TBT is informative and governance-oriented rather than a normative W3C timing metric.\n\nGoverned implementations MAY use TBT to prioritize JavaScript execution reduction, third-party script control, and main-thread decongestion work.\n\nDownstream implementations SHOULD avoid presenting TBT as a direct ranking metric or as a substitute for standards-backed metrics such as FCP, LCP, or long-task observations.",
@@ -21,8 +21,15 @@
     "normative: Paint Timing - https://www.w3.org/TR/paint-timing/"
   ],
   "supersedes": [],
-  "superseded_by": [],
-  "status_notes": [],
+  "superseded_by": [
+    "spc:total-blocking-time-derived-metric-contract"
+  ],
+  "status_notes": [
+    {
+      "date": "2026-08-10",
+      "note": "Superseded by narrower canonical governance documents during the portfolio deduplication."
+    }
+  ],
   "tags": [
     "performance",
     "tbt",

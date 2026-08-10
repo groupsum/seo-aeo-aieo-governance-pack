@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "spec",
+  "id": "spc:search-performance-evidence-profile",
+  "number": 821,
+  "slug": "search-performance-evidence-profile",
+  "title": "Search Performance Evidence Profile",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "Defines how canonical performance evidence supports search governance.",
+  "body": "## Requirements\n\n- Reference canonical metric IDs, versions, sampling, and evidence.\n- Keep field evidence distinct from derived tooling scores.\n- Express search consequences without redefining metric algorithms.",
+  "decision_date": "2026-08-10",
+  "references": [
+    "https://developers.google.com/search/docs/appearance/core-web-vitals"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "search",
+    "performance",
+    "evidence",
+    "profile"
+  ],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:search-governance-consumes-canonical-performance-evidence"
+  ]
+}

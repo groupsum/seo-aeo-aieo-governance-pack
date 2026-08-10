@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "adr",
+  "id": "adr:search-governance-consumes-canonical-performance-evidence",
+  "number": 812,
+  "slug": "search-governance-consumes-canonical-performance-evidence",
+  "title": "Search Governance Consumes Canonical Performance Evidence",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "Search governance consumes canonical performance evidence without redefining browser metrics.",
+  "body": "SEO governance owns discovery eligibility, quality interpretation, and disclosure. RUM governance owns performance metric and transport definitions.",
+  "decision_date": "2026-08-10",
+  "references": [
+    "https://developers.google.com/search/docs/appearance/core-web-vitals"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "search",
+    "governance",
+    "consumes",
+    "canonical",
+    "performance",
+    "evidence"
+  ]
+}

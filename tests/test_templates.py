@@ -75,10 +75,11 @@ class TemplateManifestTests(unittest.TestCase):
         self.assertIn("adr", manifest["documents"])
         self.assertIn("spec", manifest["documents"])
         self.assertEqual("adr:0800", get_packaged_document_entry("adr:0800")["id"])
-        self.assertEqual(33, len(list_packaged_document_ids()))
+        self.assertEqual(28, len(list_packaged_document_ids()))
+
     def test_adr_manifest_has_expected_rows(self) -> None:
         manifest = load_document_manifest("adr")
-        self.assertEqual(12, len(manifest))
+        self.assertEqual(11, len(manifest))
         self.assertEqual(
             [
                 "adr:0800",
@@ -91,15 +92,14 @@ class TemplateManifestTests(unittest.TestCase):
                 "adr:0807",
                 "adr:0808",
                 "adr:0809",
-                "adr:0810",
-                "adr:0811",
+                "adr:search-governance-consumes-canonical-performance-evidence",
             ],
             [row["id"] for row in manifest],
         )
 
     def test_spec_manifest_has_expected_rows(self) -> None:
         manifest = load_document_manifest("spec")
-        self.assertEqual(21, len(manifest))
+        self.assertEqual(17, len(manifest))
         self.assertEqual(
             [
                 "spc:0800",
@@ -113,16 +113,12 @@ class TemplateManifestTests(unittest.TestCase):
                 "spc:0808",
                 "spc:0809",
                 "spc:0810",
-                "spc:0811",
                 "spc:0812",
                 "spc:0813",
                 "spc:0814",
                 "spc:0815",
                 "spc:0816",
-                "spc:0817",
-                "spc:0818",
-                "spc:0819",
-                "spc:0820",
+                "spc:search-performance-evidence-profile",
             ],
             [row["id"] for row in manifest],
         )

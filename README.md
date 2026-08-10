@@ -162,3 +162,7 @@ print(text[:120])
 - GitHub repository: [groupsum/seo-aeo-aieo-governance-pack](https://github.com/groupsum/seo-aeo-aieo-governance-pack)
 - PyPI package: [seo-aeo-aieo-governance-pack](https://pypi.org/project/seo-aeo-aieo-governance-pack/)
 - SSOT Registry: [ssot-registry](https://pypi.org/project/ssot-registry/)
+
+## Normative ownership boundary
+
+Removed duplicate performance metric definitions and added a search-performance evidence profile.

@@ -5,7 +5,7 @@
   "number": 811,
   "slug": "core-web-vitals-performance-contract",
   "title": "Core Web Vitals performance contract",
-  "status": "draft",
+  "status": "superseded",
   "origin": "extension-pack",
   "summary": "Defines the governed Core Web Vitals user-experience targets that materially affect page usability and search-adjacent quality evaluation.",
   "body": "The Core Web Vitals performance contract SHALL define the governed Core Web Vitals user-experience targets that materially affect page usability and search-adjacent quality evaluation.\n\nThis contract SHALL cover:\n- Largest Contentful Paint (LCP)\n- Interaction to Next Paint (INP)\n- Cumulative Layout Shift (CLS)\n\nTarget thresholds for governed pages SHOULD align with current operator guidance at the 75th percentile, including:\n- LCP <= 2.5 seconds\n- INP <= 200 milliseconds\n- CLS <= 0.1\n\nDownstream implementations SHOULD evaluate these metrics using field-oriented measurement where practical and SHOULD distinguish:\n- template-level regressions\n- route-level regressions\n- asset-induced regressions\n- third-party script regressions\n\nThe detailed standards-backed measurement contract for LCP SHALL be defined by the dedicated Largest Contentful Paint contract.\n\nThis contract SHALL explicitly exclude Total Blocking Time from the Core Web Vitals set and SHALL treat TBT as a separate operator metric.\n\nThis contract SHALL treat performance as a governed user-experience surface, not as a guarantee of ranking outcome.",
@@ -21,8 +21,17 @@
     "normative: Largest Contentful Paint - https://www.w3.org/TR/largest-contentful-paint/"
   ],
   "supersedes": [],
-  "superseded_by": [],
-  "status_notes": [],
+  "superseded_by": [
+    "spc:largest-contentful-paint-rum-contract",
+    "spc:cumulative-layout-shift-rum-contract",
+    "spc:interaction-to-next-paint-rum-contract"
+  ],
+  "status_notes": [
+    {
+      "date": "2026-08-10",
+      "note": "Superseded by narrower canonical governance documents during the portfolio deduplication."
+    }
+  ],
   "tags": [
     "performance",
     "core-web-vitals",

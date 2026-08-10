@@ -5,7 +5,7 @@
   "number": 817,
   "slug": "first-contentful-paint-contract",
   "title": "First Contentful Paint contract",
-  "status": "draft",
+  "status": "superseded",
   "origin": "extension-pack",
   "summary": "Defines the governed measurement semantics and operator expectations for First Contentful Paint using the W3C Paint Timing authority layer.",
   "body": "The First Contentful Paint contract SHALL define the governed measurement semantics and operator expectations for First Contentful Paint using the W3C Paint Timing authority layer.\n\nThis contract SHALL cover:\n- First Contentful Paint (FCP) as a standards-backed paint timing metric\n- measurement semantics derived from the browser timing surface rather than from custom application heuristics\n- operator reporting that distinguishes measurement from ranking claims\n\nGoverned implementations SHOULD use FCP as an early rendering signal for page usability and loading behavior.\n\nThis contract SHALL treat FCP as a page-rendering metric that helps explain the onset of visible content, but SHALL NOT treat FCP alone as sufficient evidence of good responsiveness, accessibility, or search-result quality.\n\nDownstream implementations MAY define route, template, or device-class policies for FCP targets, but the metric semantics SHALL remain anchored to the underlying standards-backed timing definition.",
@@ -18,8 +18,15 @@
     "normative: Paint Timing - https://www.w3.org/TR/paint-timing/"
   ],
   "supersedes": [],
-  "superseded_by": [],
-  "status_notes": [],
+  "superseded_by": [
+    "spc:first-contentful-paint-rum-contract"
+  ],
+  "status_notes": [
+    {
+      "date": "2026-08-10",
+      "note": "Superseded by narrower canonical governance documents during the portfolio deduplication."
+    }
+  ],
   "tags": [
     "performance",
     "fcp",

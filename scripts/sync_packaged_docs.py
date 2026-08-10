@@ -60,7 +60,7 @@ def _sync_kind(kind: str, templates: Path, version: str) -> list[dict]:
             "status": payload["status"],
             "supersedes": payload.get("supersedes", []),
             "superseded_by": payload.get("superseded_by", []),
-            "status_notes": [],
+            "status_notes": payload.get("status_notes", []),
         }
         if kind == "spec":
             entry["kind"] = payload["spec_kind"]
