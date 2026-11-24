@@ -149,13 +149,15 @@ The script prints `pack:seo-aeo-aieo-governance` from the installed pack metadat
 Source: [examples/usage.py](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/examples/usage.py).
 
 ```python
-"""Resolve and read a packaged specification without synchronizing it."""
+"""Find a specification and its downstream path in the installed manifest."""
 
-from seo_aeo_aieo_governance_pack import load_document_manifest, read_packaged_document_text
+from seo_aeo_aieo_governance_pack import load_document_manifest
 
-spec = next(row for row in load_document_manifest("spec") if row["id"] == "spc:0800")
-document = read_packaged_document_text("spec", spec["filename"])
-assert spec["id"] in document
+specification = next(
+    row for row in load_document_manifest("spec")
+    if row["id"] == "spc:0800"
+)
+assert specification["target_path"] == ".ssot/specs/SPEC-0800-seo-governance-surface.yaml"
 ```
 <!-- readme-standards:end example.usage -->
 
