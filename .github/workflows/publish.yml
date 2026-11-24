@@ -105,13 +105,18 @@ jobs:
           name: release-notes
           path: ${{ steps.release_meta.outputs.release-notes }}
 
+      - name: Refresh the package README for the new version
+        run: |
+          uvx --from readme-standards==0.1.3 readme-standards render --write
+          uvx --from readme-standards==0.1.3 readme-standards check
+
       - name: Commit version bump
         id: commit
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pyproject.toml CHANGELOG.md src/seo_aeo_aieo_governance_pack/templates
+          git add pyproject.toml README.md CHANGELOG.md src/seo_aeo_aieo_governance_pack/templates
           git commit -m "chore(release): bump version to ${{ steps.version.outputs.version }}"
           git push origin "HEAD:${{ github.ref_name }}"
           echo "release-ref=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"

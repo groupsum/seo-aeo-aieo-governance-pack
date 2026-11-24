@@ -74,4 +74,47 @@ dev = [
   "pytest>=8.0",
 ]
 
+[tool.readme_standards]
+policy = "package-guide-v1"
+brand = "groupsum"
+brand_catalog = "docs/readme-brands.toml"
+repository = "https://github.com/groupsum/seo-aeo-aieo-governance-pack"
+ref = "master"
+package_path = "."
+layer = "governance"
+lifecycle = "active"
+license_file = "LICENSE"
 
+[tool.readme_standards.distributions.pypi]
+name = "seo-aeo-aieo-governance-pack"
+published = true
+
+[tool.readme_standards.examples.quick_start]
+source = "examples/quick_start.py"
+expected_stdout = "examples/quick_start.stdout"
+test = ".github/workflows/readme-standards.yml"
+
+[tool.readme_standards.examples.usage]
+source = "examples/usage.py"
+expected_exit_code = 0
+test = ".github/workflows/readme-standards.yml"
+
+[tool.readme_standards.statuses.readme]
+label = "CI gate"
+url = "https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/readme-standards.yml"
+
+[tool.readme_standards.statuses.tests]
+label = "package and example checks"
+url = "https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/readme-standards.yml"
+
+[tool.readme_standards.statuses.certification]
+label = "not certified"
+url = "https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/README.md#certification-status"
+
+[tool.readme_standards.statuses.governance]
+label = "pack governance"
+url = "https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/docs/pack-guide.md"
+
+[tool.readme_standards.statuses.evidence]
+label = "README and wheel checks"
+url = "https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/readme-standards.yml"

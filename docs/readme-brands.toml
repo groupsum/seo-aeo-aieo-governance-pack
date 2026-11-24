@@ -1,0 +1,5 @@
+[brands.groupsum]
+name = "Groupsum"
+homepage = "https://github.com/groupsum/readme-standards"
+logo_url = "https://raw.githubusercontent.com/groupsum/readme-standards/master/docs/assets/readme-standards.svg"
+logo_alt = "Groupsum README Standards"
