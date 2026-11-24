@@ -310,7 +310,7 @@
     "title": "Search Performance Evidence Profile",
     "filename": "SPEC-821-search-performance-evidence-profile.yaml",
     "target_path": ".ssot/specs/SPEC-821-search-performance-evidence-profile.yaml",
-    "sha256": "39c6712da4f7f25dd9380e714fe0cfae4677830050284d6c40157f50189d8c80",
+    "sha256": "ba2459db82e220fff126385df50bb36392a2f1d9afa466e4ad2ccb983c5da690",
     "origin": "extension-pack",
     "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
     "immutable": true,

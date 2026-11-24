@@ -3,3 +3,4 @@
 *.yaml text eol=lf
 src/**/templates/**/manifest.json text eol=lf
 uv.lock text eol=lf
+src/**/templates/**/*.json text eol=lf
