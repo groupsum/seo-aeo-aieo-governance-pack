@@ -186,7 +186,7 @@
     "title": "Search Governance Consumes Canonical Performance Evidence",
     "filename": "ADR-812-search-governance-consumes-canonical-performance-evidence.yaml",
     "target_path": ".ssot/adr/ADR-812-search-governance-consumes-canonical-performance-evidence.yaml",
-    "sha256": "84b5720cffe14c9b38e5687b56fdbb80793877f617fe5d154b0648d54f30db1a",
+    "sha256": "045ba7285618470614ed2c2fbef74d17453f8f249c1ce6af1ba5a46cafb4da61",
     "origin": "extension-pack",
     "reservation_owner": "extension-pack:seo-aeo-aieo-governance-pack",
     "immutable": true,

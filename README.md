@@ -1,168 +1,336 @@
-<div align="center">
+# seo-aeo-aieo-governance-pack
 
-<h1>seo-aeo-aieo-governance-pack</h1>
-
-<p>
-  <a href="https://pypi.org/project/seo-aeo-aieo-governance-pack/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/seo-aeo-aieo-governance-pack.svg"></a>
-  <a href="https://pepy.tech/projects/seo-aeo-aieo-governance-pack"><img alt="Downloads" src="https://static.pepy.tech/badge/seo-aeo-aieo-governance-pack"></a>
-  <a href="https://hits.sh/github.com/groupsum/seo-aeo-aieo-governance-pack/"><img alt="Hits" src="https://hits.sh/github.com/groupsum/seo-aeo-aieo-governance-pack.svg"></a>
-  <a href="https://pypi.org/project/seo-aeo-aieo-governance-pack/"><img alt="Python versions" src="https://img.shields.io/pypi/pyversions/seo-aeo-aieo-governance-pack.svg"></a>
-  <a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/pypi/l/seo-aeo-aieo-governance-pack.svg"></a>
-  <a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/ci.yml/badge.svg?branch=master"></a>
+<!-- readme-standards:begin branding -->
+<p align="center"><a href="https://github.com/groupsum/readme-standards"><img src="https://raw.githubusercontent.com/groupsum/readme-standards/master/docs/assets/readme-standards.svg" alt="Groupsum README Standards" width="300"></a></p>
+<p align="center"><strong>seo-aeo-aieo-governance-pack</strong></p>
+<p align="center">Installable ADR and SPEC extension pack for SEO, AEO, and AiEO governance.</p>
+<p align="center">
+<a href="https://pypi.org/project/seo-aeo-aieo-governance-pack/"><img alt="pypi: seo-aeo-aieo-governance-pack" src="https://img.shields.io/pypi/v/seo-aeo-aieo-governance-pack?labelColor=1E293B&amp;color=1D4ED8"></a>
+<a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/pyproject.toml"><img alt="Source version: 0.2.0.dev1" src="https://img.shields.io/static/v1?label=Source%20version&amp;message=0.2.0.dev1&amp;labelColor=1E293B&amp;color=4338CA"></a>
+<a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/pyproject.toml"><img alt="Python: &gt;=3.10,&lt;3.15" src="https://img.shields.io/static/v1?label=Python&amp;message=%3E%3D3.10%2C%3C3.15&amp;labelColor=1E293B&amp;color=0F766E"></a>
+<a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/pyproject.toml"><img alt="Layer: governance" src="https://img.shields.io/static/v1?label=Layer&amp;message=governance&amp;labelColor=1E293B&amp;color=6D28D9"></a>
+<a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/README.md#lifecycle-and-migration"><img alt="Lifecycle: active" src="https://img.shields.io/static/v1?label=Lifecycle&amp;message=active&amp;labelColor=1E293B&amp;color=166534"></a>
+<a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/static/v1?label=License&amp;message=Apache-2.0&amp;labelColor=1E293B&amp;color=86198F"></a>
+<a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/README.md#notices"><img alt="Notice: not required" src="https://img.shields.io/static/v1?label=Notice&amp;message=not%20required&amp;labelColor=1E293B&amp;color=475569"></a>
 </p>
-
-<p>
-  <a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack"><img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-groupsum%2Fseo--aeo--aieo--governance--pack-181717?logo=github"></a>
+<p align="center">
+<a href="https://pypi.org/project/seo-aeo-aieo-governance-pack/"><img alt="Monthly PyPI downloads: seo-aeo-aieo-governance-pack" src="https://img.shields.io/pypi/dm/seo-aeo-aieo-governance-pack?labelColor=1E293B&amp;color=0E7490"></a>
+<a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/README.md"><img alt="README hits: seo-aeo-aieo-governance-pack" src="https://hits.sh/github.com/groupsum/seo-aeo-aieo-governance-pack/README.md.svg?label=README%20hits&amp;labelColor=1E293B&amp;color=0E7490"></a>
 </p>
+<p align="center">
+<a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/readme-standards.yml"><img alt="README standards: CI gate" src="https://img.shields.io/static/v1?label=README%20standards&amp;message=CI%20gate&amp;labelColor=1E293B&amp;color=1D4ED8"></a>
+<a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/readme-standards.yml"><img alt="Tests: package and example checks" src="https://img.shields.io/static/v1?label=Tests&amp;message=package%20and%20example%20checks&amp;labelColor=1E293B&amp;color=0F766E"></a>
+<a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/README.md#certification-status"><img alt="Certification: not certified" src="https://img.shields.io/static/v1?label=Certification&amp;message=not%20certified&amp;labelColor=1E293B&amp;color=92400E"></a>
+<a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/docs/pack-guide.md"><img alt="Governance: pack governance" src="https://img.shields.io/static/v1?label=Governance&amp;message=pack%20governance&amp;labelColor=1E293B&amp;color=4338CA"></a>
+<a href="https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/readme-standards.yml"><img alt="Evidence: README and wheel checks" src="https://img.shields.io/static/v1?label=Evidence&amp;message=README%20and%20wheel%20checks&amp;labelColor=1E293B&amp;color=6D28D9"></a>
+</p>
+<p align="center"><a href="#overview">Overview</a> · <a href="#installation">Installation</a> · <a href="#quick-start">Quick Start</a> · <a href="#usage">Usage</a> · <a href="#public-api-and-import-surfaces">API</a> · <a href="#contributing">Contributing</a> · <a href="#governance">Governance</a> · <a href="#license">License</a></p>
+<!-- readme-standards:end branding -->
 
-</div>
+---
 
-`seo-aeo-aieo-governance-pack` is an SSOT Registry pack for search visibility, answer visibility, AI citation readiness, web metadata quality, accessibility, and performance governance.
+## Overview
 
-It gives product, platform, content, and compliance teams a shared set of Architecture Decision Records (ADRs) and Specifications (SPECs) that can be applied across many repositories. Centralizing these requirements turns discoverability work into reusable governance: one reviewed standard can be synchronized into project registries, linked to features and tests, and reused during release review instead of being rewritten from scratch in every product.
+### Summary
 
-## What Is An SSOT Registry Pack?
+Installable SSOT governance pack for SEO, AEO, and AiEO documents.
 
-An SSOT Registry pack is an installable package of governed ADRs and SPECs for [`ssot-registry`](https://pypi.org/project/ssot-registry/). The pack supplies reusable decision and requirement documents. `ssot-registry` applies those documents to a project registry so teams can trace product requirements from decision, to specification, to implementation, to tests and release evidence.
+### Why This Package
 
-This makes governance portable. A project can adopt the pack, synchronize the documents, list the active requirements, and connect local features or tests to the shared IDs.
+The pack supplies versioned, source-linked ADR and SPEC templates for SEO, AEO, and AiEO Governance Pack.
 
-## Why This Pack Exists
+### When to Use
 
-Search, answer, and AI discovery requirements now span many surfaces: HTML metadata, structured data, robots policy, sitemaps, crawler controls, accessibility baselines, social graph previews, and performance signals. Teams need one durable source for these requirements so product changes, content operations, and technical implementation stay aligned.
+Use this pack when a downstream SSOT Registry needs reusable decisions and requirements for SEO, AEO, and AiEO Governance Pack.
 
-This pack helps teams:
+### Features
 
-- apply reviewed SEO, AEO, and AiEO requirements quickly across projects
-- keep search metadata, answer extraction, and AI citation requirements consistent
-- give engineering and content teams the same IDs for planning, implementation, and review
-- connect accessibility and performance quality to discoverability governance
-- make release reviews easier by tracing project work back to shared ADRs and SPECs
+**Included ADRs**
 
-## Domain Focus
+- [`adr:0800`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/adr/ADR-0800-seo-aeo-aieo-origin-packaging.yaml) — SEO, AEO, and AiEO governance documents ship as an installable extension pack
+- [`adr:0801`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/adr/ADR-0801-crawl-control-is-distinct-from-indexing-control.yaml) — Crawl control is distinct from indexing control
+- [`adr:0802`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/adr/ADR-0802-discovery-artifacts-are-separate-from-metadata-artifacts.yaml) — Discovery artifacts are separate from metadata artifacts
+- [`adr:0803`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/adr/ADR-0803-canonical-html-metadata-remains-the-source-page-contract.yaml) — Canonical HTML metadata remains the source page contract
+- [`adr:0804`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/adr/ADR-0804-structured-data-uses-layered-authority.yaml) — Structured data uses layered authority
+- [`adr:0805`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/adr/ADR-0805-google-ai-features-do-not-justify-ai-specific-schema-or-ai-only-files.yaml) — Google AI features do not justify AI-specific schema or AI-only files
+- [`adr:0806`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/adr/ADR-0806-accessibility-conformance-is-a-governed-discovery-quality-prerequisite.yaml) — Accessibility conformance is a governed discovery-quality prerequisite
+- [`adr:0807`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/adr/ADR-0807-social-graph-metadata-is-separate-from-search-structured-data.yaml) — Social graph metadata is separate from search structured data
+- [`adr:0808`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/adr/ADR-0808-ai-crawler-controls-must-distinguish-search-training-and-user-triggered-fetch.yaml) — AI crawler controls must distinguish search, training, and user-triggered fetch
+- [`adr:0809`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/adr/ADR-0809-llmstxt-is-experimental-and-must-not-outrank-canonical-surfaces.yaml) — llms.txt is experimental and must not outrank canonical surfaces
+- [`adr:search-governance-consumes-canonical-performance-evidence`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/adr/ADR-812-search-governance-consumes-canonical-performance-evidence.yaml) — Search Governance Consumes Canonical Performance Evidence
 
-The pack focuses on product domains where discoverability, answer quality, and machine-readable metadata directly affect user acquisition, trust, and citation quality:
+**Included SPECs**
 
-- SEO and organic search governance
-- AEO answer surface governance
-- AiEO citation and provenance governance
-- robots and crawler control policy
-- sitemap and discovery artifact policy
-- HTML head metadata and canonical URL policy
-- structured data vocabulary and encoding quality
-- social preview metadata for Open Graph and X / Twitter Cards
-- accessibility baseline governance through WCAG 2.1 AA
-- web performance quality using Core Web Vitals and supporting metrics
-- AI crawler controls and experimental `llms.txt` handling
+- [`spc:0800`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0800-seo-governance-surface.yaml) — SEO governance surface
+- [`spc:0801`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0801-aeo-answer-surface-contract.yaml) — AEO answer surface contract
+- [`spc:0802`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0802-aieo-citation-and-provenance-contract.yaml) — AiEO citation and provenance contract
+- [`spc:0803`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0803-robots-exclusion-protocol-contract.yaml) — Robots exclusion protocol contract
+- [`spc:0804`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0804-sitemap-and-sitemap-index-contract.yaml) — Sitemap and sitemap-index contract
+- [`spc:0805`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0805-html-head-metadata-and-canonical-link-contract.yaml) — HTML head metadata and canonical link contract
+- [`spc:0806`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0806-structured-data-vocabulary-and-encoding-contract.yaml) — Structured data vocabulary and encoding contract
+- [`spc:0807`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0807-google-search-eligibility-and-structured-data-quality-contract.yaml) — Google Search eligibility and structured data quality contract
+- [`spc:0808`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0808-google-ai-features-eligibility-contract.yaml) — Google AI features eligibility contract
+- [`spc:0809`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0809-helpful-reliable-people-first-content-contract.yaml) — Helpful, reliable, people-first content contract
+- [`spc:0810`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0810-wcag-2-1-aa-accessibility-contract.yaml) — WCAG 2.1 AA accessibility contract
+- [`spc:0812`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0812-open-graph-contract.yaml) — Open Graph contract
+- [`spc:0813`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0813-x-twitter-cards-contract.yaml) — X / Twitter Cards contract
+- [`spc:0814`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0814-dcmi-interoperable-metadata-contract.yaml) — DCMI interoperable metadata contract
+- [`spc:0815`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0815-openai-crawler-controls-contract.yaml) — OpenAI crawler controls contract
+- [`spc:0816`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-0816-llmstxt-experimental-contract.yaml) — `llms.txt` experimental contract
+- [`spc:search-performance-evidence-profile`](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates/specs/SPEC-821-search-performance-evidence-profile.yaml) — Search Performance Evidence Profile
 
-## Included ADRs
+### Non-Goals
 
-- `adr:0800` SEO, AEO, and AiEO documents ship as an installable extension pack
-- `adr:0801` crawl control is distinct from indexing control
-- `adr:0802` discovery artifacts are separate from metadata artifacts
-- `adr:0803` canonical HTML metadata remains the source page contract
-- `adr:0804` structured data uses layered authority
-- `adr:0805` Google AI features do not justify AI-specific schema or AI-only files
-- `adr:0806` accessibility conformance is a governed discovery-quality prerequisite
-- `adr:0807` social graph metadata is separate from search structured data
-- `adr:0808` AI crawler controls must distinguish search, training, and user-triggered fetch
-- `adr:0809` `llms.txt` is experimental and must not outrank canonical surfaces
-- `adr:0810` performance metrics use standards-backed authority where available
-- `adr:0811` derived tooling metrics remain separate from web-platform normative metrics
+The pack supplies governance records. A downstream application implements the controls and collects its own conformance evidence.
 
-## Included SPECs
+---
 
-- `spc:0800` SEO governance surface
-- `spc:0801` AEO answer surface contract
-- `spc:0802` AiEO citation and provenance contract
-- `spc:0803` robots exclusion protocol contract
-- `spc:0804` sitemap and sitemap-index contract
-- `spc:0805` HTML head metadata and canonical link contract
-- `spc:0806` structured data vocabulary and encoding contract
-- `spc:0807` Google Search eligibility and structured data quality contract
-- `spc:0808` Google AI features eligibility contract
-- `spc:0809` helpful, reliable, people-first content contract
-- `spc:0810` WCAG 2.1 AA accessibility contract
-- `spc:0811` Core Web Vitals performance contract
-- `spc:0812` Open Graph contract
-- `spc:0813` X / Twitter Cards contract
-- `spc:0814` DCMI interoperable metadata contract
-- `spc:0815` OpenAI crawler controls contract
-- `spc:0816` `llms.txt` experimental contract
-- `spc:0817` First Contentful Paint contract
-- `spc:0818` Largest Contentful Paint contract
-- `spc:0819` Long Tasks responsiveness contract
-- `spc:0820` Total Blocking Time operator contract
+## Getting Started
 
-## Install With uv
+### Prerequisites
 
-Install the pack into a project environment:
+Use Python `>=3.10,<3.15`. Downstream synchronization also requires SSOT Registry and permission to write the target registry.
 
+### Installation
+
+#### uv
+
+<!-- readme-standards:begin installation.uv -->
 ```bash
 uv add seo-aeo-aieo-governance-pack
 ```
+<!-- readme-standards:end installation.uv -->
 
-Install it alongside the SSOT Registry CLI:
+#### pip
 
+<!-- readme-standards:begin installation.pip -->
 ```bash
-uv add ssot-registry seo-aeo-aieo-governance-pack
+python -m pip install seo-aeo-aieo-governance-pack
 ```
+<!-- readme-standards:end installation.pip -->
 
-Run without adding dependencies to a project:
+#### Poetry
 
+<!-- readme-standards:begin installation.poetry -->
 ```bash
-uvx --from ssot-registry --with seo-aeo-aieo-governance-pack ssot --help
+poetry add seo-aeo-aieo-governance-pack
 ```
+<!-- readme-standards:end installation.poetry -->
 
-## Install With The SSOT Registry Pack CLI
+### Quick Start
 
-Pack-enabled SSOT Registry environments can install and synchronize packs through the pack command surface:
+#### Example
 
-```bash
-uvx --from ssot-registry ssot pack install seo-aeo-aieo-governance-pack
-uvx --from ssot-registry ssot pack sync . seo-aeo-aieo-governance-pack
-```
-
-## Use With The SSOT Registry CLI
-
-After the pack is installed in the same environment as `ssot-registry`, synchronize ADRs and SPECs into a target repository:
-
-```bash
-uv run ssot adr sync .
-uv run ssot spec sync .
-```
-
-Review the synchronized governance surface:
-
-```bash
-uv run ssot adr list .
-uv run ssot spec list .
-uv run ssot spec get . --id spc:0805
-```
-
-Use the IDs from this pack when linking project features, tests, claims, and release evidence in your local `.ssot` registry.
-
-## Programmatic Usage
+<!-- readme-standards:begin example.quick-start -->
+Source: [examples/quick_start.py](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/examples/quick_start.py).
 
 ```python
-from seo_aeo_aieo_governance_pack import load_document_manifest, read_packaged_document_text
+"""Inspect the installed pack identity."""
 
-adr_manifest = load_document_manifest("adr")
-spec_manifest = load_document_manifest("spec")
+from seo_aeo_aieo_governance_pack import load_pack_metadata
 
-print(adr_manifest[0]["id"])
-print(spec_manifest[0]["id"])
+metadata = load_pack_metadata()
+assert metadata["origin"]["id"] == "pack:seo-aeo-aieo-governance"
+print(metadata["origin"]["id"])
+```
+<!-- readme-standards:end example.quick-start -->
 
-text = read_packaged_document_text("spec", "SPEC-0801-aeo-answer-surface-contract.yaml")
-print(text[:120])
+#### Expected Result
+
+The script prints `pack:seo-aeo-aieo-governance` from the installed pack metadata.
+
+---
+
+## Usage
+
+### Common Workflows
+
+<!-- readme-standards:begin example.usage -->
+Source: [examples/usage.py](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/examples/usage.py).
+
+```python
+"""Find a specification and its downstream path in the installed manifest."""
+
+from seo_aeo_aieo_governance_pack import load_document_manifest
+
+specification = next(
+    row for row in load_document_manifest("spec")
+    if row["id"] == "spc:0800"
+)
+assert specification["target_path"] == ".ssot/specs/SPEC-0800-seo-governance-surface.yaml"
+```
+<!-- readme-standards:end example.usage -->
+
+Use the downstream environment that has both SSOT Registry and `seo-aeo-aieo-governance-pack` installed. Inspect the pack and preflight the target registry before approving synchronization.
+
+```bash
+uv run ssot pack inspect seo_aeo_aieo_governance_pack
+uv run ssot pack preflight . seo_aeo_aieo_governance_pack --all
+uv run ssot pack sync . seo_aeo_aieo_governance_pack --all --trust --yes
+uv run ssot validate .
 ```
 
-## Resources
+### Configuration
 
-- GitHub repository: [groupsum/seo-aeo-aieo-governance-pack](https://github.com/groupsum/seo-aeo-aieo-governance-pack)
-- PyPI package: [seo-aeo-aieo-governance-pack](https://pypi.org/project/seo-aeo-aieo-governance-pack/)
-- SSOT Registry: [ssot-registry](https://pypi.org/project/ssot-registry/)
+Select the installed import package `seo_aeo_aieo_governance_pack` in SSOT Registry. Review reservation owner `extension-pack:seo-aeo-aieo-governance-pack` and the target's trust policy before syncing.
 
-## Normative ownership boundary
+### Error Handling
+
+If preflight reports a schema, trust, or document-number conflict, resolve it in the target registry and repeat preflight before synchronization.
+
+### Best Practices
+
+Pin the pack version in downstream projects. Reference document IDs in local governance and inspect the change set before granting trust.
+
+---
+
+## Package Boundary
+
+### What It Owns
 
 Removed duplicate performance metric definitions and added a search-performance evidence profile.
+
+### Public API and Import Surfaces
+
+Import `load_pack_metadata`, `load_document_manifest`, and `read_packaged_document_text` from `seo_aeo_aieo_governance_pack` to inspect packaged records.
+
+### Entry Points
+
+<!-- readme-standards:begin entry-points -->
+This package declares no command-line, GUI, or plugin entry points in its manifest.
+<!-- readme-standards:end entry-points -->
+
+### Injected Dependencies
+
+The package binds its metadata and document loaders through `ssot-pack-contracts`. The caller supplies the target registry to SSOT Registry when synchronizing.
+
+### Protocol Consumers
+
+SSOT Registry uses the pack metadata, document manifests, and bundled templates during inspect, preflight, and sync.
+
+### Extensions
+
+Define downstream policies as local records and reference the pack's document IDs. Send proposed changes to the canonical pack through repository review.
+
+---
+
+## Operations and Readiness
+
+### Operational Requirements
+
+Local inspection reads installed package resources. Synchronization requires an initialized downstream registry and explicit operator approval.
+
+### Health and Observability
+
+Review the preflight and sync output, then use `ssot validate` to check the resulting registry.
+
+### Security and Resource Limits
+
+Implicit trust is disabled. Review the exact distribution, version, records, and reserved IDs before enabling trust in a target registry.
+
+### Compatibility
+
+- Python `>=3.10,<3.15`
+- SSOT Registry schema `>=0.4.0`
+- SSOT pack contracts `>=0.2.17,<0.3.0`
+
+---
+
+## Verification
+
+### Tests
+
+Run `python -m unittest discover -s tests -v` with the pack installed. The [README workflow](https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/readme-standards.yml) checks the source README and runs both examples against an installed wheel.
+
+### Certification Status
+
+The pack has no external certification. Downstream adoption requires evidence for the controls an application implements.
+
+### Evidence
+
+See the [README workflow](https://github.com/groupsum/seo-aeo-aieo-governance-pack/actions/workflows/readme-standards.yml) for package and documentation verification and the [packaged records](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/templates) for document-level sources.
+
+---
+
+## FAQ
+
+### Why
+
+**Why do document IDs matter?** Downstream records use them to trace an adopted decision or requirement to the pack that owns it.
+
+### How
+
+**How do I preview changes?** Use the registry's pack preflight before approving a sync.
+
+### When
+
+**When should I upgrade?** Read the changelog and preflight the new version against the target registry before applying it.
+
+---
+
+## Documentation and Related Packages
+
+### More Documentation
+
+See the [Pack guide](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/docs/pack-guide.md), [changelog](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/CHANGELOG.md), and [pack metadata](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/src/seo_aeo_aieo_governance_pack/metadata.json).
+
+### Related Packages
+
+[SSOT Registry](https://pypi.org/project/ssot-registry/) manages downstream registries. [SSOT Pack Contracts](https://pypi.org/project/ssot-pack-contracts/) provides the shared pack interface.
+
+### Project Links
+
+<!-- readme-standards:begin project-links -->
+- [Homepage](https://github.com/groupsum/seo-aeo-aieo-governance-pack)
+- [Issues](https://github.com/groupsum/seo-aeo-aieo-governance-pack/issues)
+- [Repository](https://github.com/groupsum/seo-aeo-aieo-governance-pack)
+- [pypi: seo-aeo-aieo-governance-pack](https://pypi.org/project/seo-aeo-aieo-governance-pack/)
+<!-- readme-standards:end project-links -->
+
+---
+
+## Contributing
+
+### How to Contribute
+
+Open an [issue](https://github.com/groupsum/seo-aeo-aieo-governance-pack/issues) or pull request describing the affected records, their authority, and the expected downstream effect.
+
+### Development Setup
+
+Install the checkout with `python -m pip install -e .`, then run `python -m unittest discover -s tests -v`. On Python 3.11 or newer, run `uvx --from readme-standards==0.1.3 readme-standards check`.
+
+### Notes for Maintainers
+
+Keep source links, document identifiers, and committed manifest hashes aligned. Run `uvx --from readme-standards==0.1.3 readme-standards render --write` after changing generated README inputs.
+
+---
+
+## Governance
+
+### Ownership and Decision Making
+
+Groupsum maintains `pack:seo-aeo-aieo-governance`. The pack's reservation owner is `extension-pack:seo-aeo-aieo-governance-pack`. Downstream registry operators approve synchronization.
+
+### Standards and Policies
+
+Review the [governance documentation](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/docs/pack-guide.md) and the primary references carried by the individual records.
+
+### Lifecycle and Migration
+
+Review [release changes](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/CHANGELOG.md) and preflight the chosen version against each downstream registry.
+
+---
+
+## License and Attribution
+
+### License
+
+<!-- readme-standards:begin license -->
+Licensed under `Apache-2.0`. See [LICENSE](https://github.com/groupsum/seo-aeo-aieo-governance-pack/blob/master/LICENSE).
+<!-- readme-standards:end license -->
+
+### Notices
+
+<!-- readme-standards:begin notices -->
+No separate NOTICE file is declared. Review the license and bundled third-party attributions.
+<!-- readme-standards:end notices -->
